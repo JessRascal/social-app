@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8C20F631CCE3BAA009369AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F621CCE3BAA009369AD /* AppDelegate.swift */; };
+		C8C20F651CCE3BAA009369AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F641CCE3BAA009369AD /* ViewController.swift */; };
+		C8C20F681CCE3BAA009369AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F661CCE3BAA009369AD /* Main.storyboard */; };
+		C8C20F6A1CCE3BAA009369AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F691CCE3BAA009369AD /* Assets.xcassets */; };
+		C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8C20F5F1CCE3BAA009369AD /* justonejess-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "justonejess-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C20F621CCE3BAA009369AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8C20F641CCE3BAA009369AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8C20F671CCE3BAA009369AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8C20F691CCE3BAA009369AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8C20F6C1CCE3BAA009369AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8C20F6E1CCE3BAA009369AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8C20F5C1CCE3BAA009369AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8C20F561CCE3BA9009369AD = {
+			isa = PBXGroup;
+			children = (
+				C8C20F611CCE3BAA009369AD /* justonejess-social */,
+				C8C20F601CCE3BAA009369AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8C20F601CCE3BAA009369AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F5F1CCE3BAA009369AD /* justonejess-social.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8C20F611CCE3BAA009369AD /* justonejess-social */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F621CCE3BAA009369AD /* AppDelegate.swift */,
+				C8C20F641CCE3BAA009369AD /* ViewController.swift */,
+				C8C20F661CCE3BAA009369AD /* Main.storyboard */,
+				C8C20F691CCE3BAA009369AD /* Assets.xcassets */,
+				C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */,
+				C8C20F6E1CCE3BAA009369AD /* Info.plist */,
+			);
+			path = "justonejess-social";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8C20F5E1CCE3BAA009369AD /* justonejess-social */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C20F711CCE3BAA009369AD /* Build configuration list for PBXNativeTarget "justonejess-social" */;
+			buildPhases = (
+				C8C20F5B1CCE3BAA009369AD /* Sources */,
+				C8C20F5C1CCE3BAA009369AD /* Frameworks */,
+				C8C20F5D1CCE3BAA009369AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "justonejess-social";
+			productName = "justonejess-social";
+			productReference = C8C20F5F1CCE3BAA009369AD /* justonejess-social.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8C20F571CCE3BA9009369AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = JustOneJess;
+				TargetAttributes = {
+					C8C20F5E1CCE3BAA009369AD = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = C8C20F5A1CCE3BAA009369AD /* Build configuration list for PBXProject "justonejess-social" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8C20F561CCE3BA9009369AD;
+			productRefGroup = C8C20F601CCE3BAA009369AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8C20F5E1CCE3BAA009369AD /* justonejess-social */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8C20F5D1CCE3BAA009369AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */,
+				C8C20F6A1CCE3BAA009369AD /* Assets.xcassets in Resources */,
+				C8C20F681CCE3BAA009369AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8C20F5B1CCE3BAA009369AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C20F651CCE3BAA009369AD /* ViewController.swift in Sources */,
+				C8C20F631CCE3BAA009369AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C8C20F661CCE3BAA009369AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8C20F671CCE3BAA009369AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8C20F6C1CCE3BAA009369AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8C20F6F1CCE3BAA009369AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8C20F701CCE3BAA009369AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8C20F721CCE3BAA009369AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "justonejess-social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justonejess.justonejess-social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8C20F731CCE3BAA009369AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "justonejess-social/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justonejess.justonejess-social";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8C20F5A1CCE3BAA009369AD /* Build configuration list for PBXProject "justonejess-social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C20F6F1CCE3BAA009369AD /* Debug */,
+				C8C20F701CCE3BAA009369AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8C20F711CCE3BAA009369AD /* Build configuration list for PBXNativeTarget "justonejess-social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C20F721CCE3BAA009369AD /* Debug */,
+				C8C20F731CCE3BAA009369AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8C20F571CCE3BA9009369AD /* Project object */;
+}
