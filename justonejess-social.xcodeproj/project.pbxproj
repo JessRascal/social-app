@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0E96F632B70DE060FE7C7B /* Pods_justonejess_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */; };
+		C8C00AFD1CD0E93900B4FD41 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFC1CD0E93900B4FD41 /* DataService.swift */; };
+		C8C00AFF1CD0FBC800B4FD41 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */; };
+		C8C00B011CD0FC5E00B4FD41 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */; };
 		C8C20F631CCE3BAA009369AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F621CCE3BAA009369AD /* AppDelegate.swift */; };
 		C8C20F651CCE3BAA009369AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F641CCE3BAA009369AD /* ViewController.swift */; };
 		C8C20F681CCE3BAA009369AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F661CCE3BAA009369AD /* Main.storyboard */; };
 		C8C20F6A1CCE3BAA009369AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F691CCE3BAA009369AD /* Assets.xcassets */; };
 		C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */; };
+		C8C20F7C1CCE3C10009369AD /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F781CCE3C10009369AD /* NotoSans-Bold.ttf */; };
+		C8C20F7D1CCE3C10009369AD /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F791CCE3C10009369AD /* NotoSans-BoldItalic.ttf */; };
+		C8C20F7E1CCE3C10009369AD /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F7A1CCE3C10009369AD /* NotoSans-Italic.ttf */; };
+		C8C20F7F1CCE3C10009369AD /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C20F7B1CCE3C10009369AD /* NotoSans-Regular.ttf */; };
+		C8C20F811CCE4105009369AD /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F801CCE4105009369AD /* MaterialView.swift */; };
+		C8C20F841CCE4232009369AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F831CCE4232009369AD /* Constants.swift */; };
+		C8C20F861CCE45EE009369AD /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F851CCE45EE009369AD /* MaterialButton.swift */; };
+		C8C20F881CCE481C009369AD /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C20F871CCE481C009369AD /* MaterialTextField.swift */; };
+		C8C20F8D1CCE5070009369AD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C20F8A1CCE5070009369AD /* FBSDKCoreKit.framework */; };
+		C8C20F8E1CCE5070009369AD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C20F8B1CCE5070009369AD /* FBSDKLoginKit.framework */; };
+		C8C20F8F1CCE5070009369AD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C20F8C1CCE5070009369AD /* Bolts.framework */; };
+		C8FF41FF1CD11343006D6402 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF41FE1CD11343006D6402 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2954BB12341E6A268C2011FC /* Pods-justonejess-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justonejess-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social.release.xcconfig"; sourceTree = "<group>"; };
+		7FC93A74F0296B08D4E91A7E /* Pods-justonejess-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justonejess-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C00AFC1CD0E93900B4FD41 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		C8C20F5F1CCE3BAA009369AD /* justonejess-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "justonejess-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C20F621CCE3BAA009369AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C20F641CCE3BAA009369AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +43,19 @@
 		C8C20F691CCE3BAA009369AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C20F6C1CCE3BAA009369AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8C20F6E1CCE3BAA009369AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8C20F781CCE3C10009369AD /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		C8C20F791CCE3C10009369AD /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C8C20F7A1CCE3C10009369AD /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		C8C20F7B1CCE3C10009369AD /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		C8C20F801CCE4105009369AD /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		C8C20F831CCE4232009369AD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8C20F851CCE45EE009369AD /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		C8C20F871CCE481C009369AD /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		C8C20F8A1CCE5070009369AD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C8C20F8B1CCE5070009369AD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C8C20F8C1CCE5070009369AD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C8FF41FE1CD11343006D6402 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_justonejess_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +63,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C20F8F1CCE5070009369AD /* Bolts.framework in Frameworks */,
+				C8C20F8E1CCE5070009369AD /* FBSDKLoginKit.framework in Frameworks */,
+				C8C20F8D1CCE5070009369AD /* FBSDKCoreKit.framework in Frameworks */,
+				8F0E96F632B70DE060FE7C7B /* Pods_justonejess_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25430A6BB1BCEE98F902773E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8C00AFB1CD0E92600B4FD41 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C8C00AFC1CD0E93900B4FD41 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		C8C20F561CCE3BA9009369AD = {
 			isa = PBXGroup;
 			children = (
 				C8C20F611CCE3BAA009369AD /* justonejess-social */,
 				C8C20F601CCE3BAA009369AD /* Products */,
+				CA1D2E52688F12ED1ECA58EF /* Pods */,
+				25430A6BB1BCEE98F902773E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +110,86 @@
 		C8C20F611CCE3BAA009369AD /* justonejess-social */ = {
 			isa = PBXGroup;
 			children = (
+				C8C00AFB1CD0E92600B4FD41 /* Services */,
+				C8C20F891CCE505B009369AD /* Frameworks */,
+				C8C20F821CCE4224009369AD /* Util */,
+				C8C20F771CCE3BD9009369AD /* Resources */,
+				C8C20F761CCE3BD4009369AD /* Model */,
+				C8C20F751CCE3BCC009369AD /* View */,
+				C8C20F741CCE3BC3009369AD /* Controller */,
 				C8C20F621CCE3BAA009369AD /* AppDelegate.swift */,
-				C8C20F641CCE3BAA009369AD /* ViewController.swift */,
 				C8C20F661CCE3BAA009369AD /* Main.storyboard */,
 				C8C20F691CCE3BAA009369AD /* Assets.xcassets */,
 				C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */,
 				C8C20F6E1CCE3BAA009369AD /* Info.plist */,
 			);
 			path = "justonejess-social";
+			sourceTree = "<group>";
+		};
+		C8C20F741CCE3BC3009369AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F641CCE3BAA009369AD /* ViewController.swift */,
+				C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C8C20F751CCE3BCC009369AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F801CCE4105009369AD /* MaterialView.swift */,
+				C8C20F851CCE45EE009369AD /* MaterialButton.swift */,
+				C8C20F871CCE481C009369AD /* MaterialTextField.swift */,
+				C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C8C20F761CCE3BD4009369AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8FF41FE1CD11343006D6402 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C8C20F771CCE3BD9009369AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F781CCE3C10009369AD /* NotoSans-Bold.ttf */,
+				C8C20F791CCE3C10009369AD /* NotoSans-BoldItalic.ttf */,
+				C8C20F7A1CCE3C10009369AD /* NotoSans-Italic.ttf */,
+				C8C20F7B1CCE3C10009369AD /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C8C20F821CCE4224009369AD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F831CCE4232009369AD /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		C8C20F891CCE505B009369AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8C20F8A1CCE5070009369AD /* FBSDKCoreKit.framework */,
+				C8C20F8B1CCE5070009369AD /* FBSDKLoginKit.framework */,
+				C8C20F8C1CCE5070009369AD /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA1D2E52688F12ED1ECA58EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FC93A74F0296B08D4E91A7E /* Pods-justonejess-social.debug.xcconfig */,
+				2954BB12341E6A268C2011FC /* Pods-justonejess-social.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8C20F711CCE3BAA009369AD /* Build configuration list for PBXNativeTarget "justonejess-social" */;
 			buildPhases = (
+				C9419D103CEA20A873285896 /* Check Pods Manifest.lock */,
 				C8C20F5B1CCE3BAA009369AD /* Sources */,
 				C8C20F5C1CCE3BAA009369AD /* Frameworks */,
 				C8C20F5D1CCE3BAA009369AD /* Resources */,
+				FFE53E8E5963C3695EC1CB84 /* Embed Pods Frameworks */,
+				53F8C7191A428C6E4C1E2A7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,21 +253,81 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C20F7C1CCE3C10009369AD /* NotoSans-Bold.ttf in Resources */,
 				C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */,
+				C8C20F7D1CCE3C10009369AD /* NotoSans-BoldItalic.ttf in Resources */,
+				C8C20F7E1CCE3C10009369AD /* NotoSans-Italic.ttf in Resources */,
 				C8C20F6A1CCE3BAA009369AD /* Assets.xcassets in Resources */,
 				C8C20F681CCE3BAA009369AD /* Main.storyboard in Resources */,
+				C8C20F7F1CCE3C10009369AD /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53F8C7191A428C6E4C1E2A7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9419D103CEA20A873285896 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE53E8E5963C3695EC1CB84 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8C20F5B1CCE3BAA009369AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C20F881CCE481C009369AD /* MaterialTextField.swift in Sources */,
+				C8FF41FF1CD11343006D6402 /* Post.swift in Sources */,
+				C8C00AFD1CD0E93900B4FD41 /* DataService.swift in Sources */,
+				C8C20F811CCE4105009369AD /* MaterialView.swift in Sources */,
 				C8C20F651CCE3BAA009369AD /* ViewController.swift in Sources */,
+				C8C00AFF1CD0FBC800B4FD41 /* FeedVC.swift in Sources */,
+				C8C00B011CD0FC5E00B4FD41 /* PostCell.swift in Sources */,
 				C8C20F631CCE3BAA009369AD /* AppDelegate.swift in Sources */,
+				C8C20F841CCE4232009369AD /* Constants.swift in Sources */,
+				C8C20F861CCE45EE009369AD /* MaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +440,14 @@
 		};
 		C8C20F721CCE3BAA009369AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FC93A74F0296B08D4E91A7E /* Pods-justonejess-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/justonejess-social",
+				);
 				INFOPLIST_FILE = "justonejess-social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.justonejess.justonejess-social";
@@ -260,8 +457,14 @@
 		};
 		C8C20F731CCE3BAA009369AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2954BB12341E6A268C2011FC /* Pods-justonejess-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/justonejess-social",
+				);
 				INFOPLIST_FILE = "justonejess-social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.justonejess.justonejess-social";
@@ -288,6 +491,7 @@
 				C8C20F731CCE3BAA009369AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

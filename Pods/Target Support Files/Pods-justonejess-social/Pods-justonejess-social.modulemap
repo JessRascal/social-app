@@ -1,0 +1,6 @@
+framework module Pods_justonejess_social {
+  umbrella header "Pods-justonejess-social-umbrella.h"
+
+  export *
+  module * { export * }
+}
