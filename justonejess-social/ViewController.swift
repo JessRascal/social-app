@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { (err, authData) in
-                                    let user = ["provider": authData.provider!, "blah": "emailTest"]
+                                    let user = ["provider": authData.provider!]
                                     DataService.ds.createFirebaseUser(authData.uid, user: user)
                                 })
                                 

@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (3.3.1)
   - Firebase (2.5.1)
+  - MaterialControls (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3)
   - Firebase (>= 2.5.1)
+  - MaterialControls (~> 1.0.2)
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  MaterialControls: bdeeb94aa049b73f70739a5514be137d2d45c08a
 
 COCOAPODS: 0.39.0
