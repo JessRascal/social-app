@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B8D99BECC72FDE62AE70DAF4'
+               BlueprintIdentifier = 'FB13EA744656C80CD2E22619'
                BlueprintName = 'Pods-justonejess-social'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_justonejess_social.framework'>
