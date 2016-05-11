@@ -13,9 +13,9 @@ import Firebase
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var showcaseImg: UIImageView!
-    @IBOutlet weak var descriptionText: UITextView!
-    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var postImg: UIImageView!
+    @IBOutlet weak var postText: UILabel!
+    @IBOutlet weak var likesValue: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
     
     var post: Post!
@@ -35,7 +35,7 @@ class PostCell: UITableViewCell {
         profileImg.layer.cornerRadius = profileImg.frame.size.width / 2
         profileImg.clipsToBounds = true
         
-        showcaseImg.clipsToBounds = true
+        postImg.clipsToBounds = true
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -48,17 +48,17 @@ class PostCell: UITableViewCell {
         self.post = post
         likeRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
         
-        self.descriptionText.text = post.postDescription
-        self.likesLabel.text = "\(post.likes)"
+        self.postText.text = post.postDescription
+        self.likesValue.text = "\(post.likes)"
         
         if post.imageUrl != nil {
             if img != nil {
-                self.showcaseImg.image = img
+                self.postImg.image = img
             } else {
                 request = Alamofire.request(.GET, post.imageUrl!).validate(contentType: ["image/*"]).response(completionHandler: { request, response, data, err in
                     if err == nil {
                         let image = UIImage(data: data!)!
-                        self.showcaseImg.image = image
+                        self.postImg.image = image
                         FeedVC.imageCache.setObject(image, forKey: self.post.imageUrl!)
                     } else {
                         print(err.debugDescription)
@@ -66,16 +66,16 @@ class PostCell: UITableViewCell {
                 })
             }
         } else {
-            self.showcaseImg.hidden = true
+            self.postImg.hidden = true
         }
         
         likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             if let doesNotExist = snapshot.value as? NSNull {
                 // This means we have not liked this specific post.
-                self.likeImage.image = UIImage(named: "heart-empty")
+                self.likeImage.image = UIImage(named: "empty-heart")
             } else {
-                self.likeImage.image = UIImage(named: "heart-full")
+                self.likeImage.image = UIImage(named: "filled-heart")
             }
         })
     }
@@ -85,11 +85,11 @@ class PostCell: UITableViewCell {
             
             if let doesNotExist = snapshot.value as? NSNull {
                 // This means we have not liked this specific post.
-                self.likeImage.image = UIImage(named: "heart-full")
+                self.likeImage.image = UIImage(named: "filled-heart")
                 self.post.adjustLikes(true)
                 self.likeRef.setValue(true)
             } else {
-                self.likeImage.image = UIImage(named: "heart-empty")
+                self.likeImage.image = UIImage(named: "empty-heart")
                 self.post.adjustLikes(false)
                 self.likeRef.removeValue()
             }

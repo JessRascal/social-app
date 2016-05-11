@@ -15,6 +15,7 @@ let KEY_UID = "uid"
 
 // Segues
 let SEGUE_LOGGED_IN = "loggedIn"
+let SEGUE_SEARCH_VIEW = "showSearch"
 
 // Status codes
 let STATUS_ACCOUNT_NONEXIST = -8
