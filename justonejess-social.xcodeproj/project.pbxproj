@@ -10,7 +10,7 @@
 		8F0E96F632B70DE060FE7C7B /* Pods_justonejess_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */; };
 		C83056991CDA84A5001D68D3 /* JOJMainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83056981CDA84A5001D68D3 /* JOJMainToolbar.swift */; };
 		C830569B1CDA92CB001D68D3 /* JOJMoreMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569A1CDA92CB001D68D3 /* JOJMoreMenuView.swift */; };
-		C830569D1CDA96B6001D68D3 /* JOJNewPostBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569C1CDA96B6001D68D3 /* JOJNewPostBtn.swift */; };
+		C830569D1CDA96B6001D68D3 /* JOJFabBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569C1CDA96B6001D68D3 /* JOJFabBtn.swift */; };
 		C830569F1CDA9DB0001D68D3 /* JOJSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569E1CDA9DB0001D68D3 /* JOJSearchBar.swift */; };
 		C83056A11CDBDD66001D68D3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83056A01CDBDD66001D68D3 /* SearchVC.swift */; };
 		C83056A31CDBE495001D68D3 /* JOJPostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83056A21CDBE495001D68D3 /* JOJPostCard.swift */; };
@@ -18,6 +18,9 @@
 		C87B9B6C1CE3E47C002E80E2 /* JOJPNewPostToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B6B1CE3E47C002E80E2 /* JOJPNewPostToolbar.swift */; };
 		C87B9B6E1CE3E770002E80E2 /* JOJMaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B6D1CE3E770002E80E2 /* JOJMaterialView.swift */; };
 		C87B9B7C1CE50A58002E80E2 /* JOJSignInBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B7B1CE50A58002E80E2 /* JOJSignInBtn.swift */; };
+		C87B9B7E1CE51109002E80E2 /* JOJMaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B7D1CE51109002E80E2 /* JOJMaterialTextField.swift */; };
+		C87B9B831CE521FB002E80E2 /* JOJFabCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B821CE521FB002E80E2 /* JOJFabCamera.swift */; };
+		C87B9B851CE52312002E80E2 /* JOJFabAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B9B841CE52312002E80E2 /* JOJFabAdd.swift */; };
 		C8C00AFD1CD0E93900B4FD41 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFC1CD0E93900B4FD41 /* DataService.swift */; };
 		C8C00AFF1CD0FBC800B4FD41 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */; };
 		C8C00B011CD0FC5E00B4FD41 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */; };
@@ -42,7 +45,7 @@
 		7FC93A74F0296B08D4E91A7E /* Pods-justonejess-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justonejess-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social.debug.xcconfig"; sourceTree = "<group>"; };
 		C83056981CDA84A5001D68D3 /* JOJMainToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMainToolbar.swift; sourceTree = "<group>"; };
 		C830569A1CDA92CB001D68D3 /* JOJMoreMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMoreMenuView.swift; sourceTree = "<group>"; };
-		C830569C1CDA96B6001D68D3 /* JOJNewPostBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJNewPostBtn.swift; sourceTree = "<group>"; };
+		C830569C1CDA96B6001D68D3 /* JOJFabBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJFabBtn.swift; sourceTree = "<group>"; };
 		C830569E1CDA9DB0001D68D3 /* JOJSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJSearchBar.swift; sourceTree = "<group>"; };
 		C83056A01CDBDD66001D68D3 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		C83056A21CDBE495001D68D3 /* JOJPostCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJPostCard.swift; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		C87B9B6B1CE3E47C002E80E2 /* JOJPNewPostToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJPNewPostToolbar.swift; sourceTree = "<group>"; };
 		C87B9B6D1CE3E770002E80E2 /* JOJMaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMaterialView.swift; sourceTree = "<group>"; };
 		C87B9B7B1CE50A58002E80E2 /* JOJSignInBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJSignInBtn.swift; sourceTree = "<group>"; };
+		C87B9B7D1CE51109002E80E2 /* JOJMaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMaterialTextField.swift; sourceTree = "<group>"; };
+		C87B9B821CE521FB002E80E2 /* JOJFabCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJFabCamera.swift; sourceTree = "<group>"; };
+		C87B9B841CE52312002E80E2 /* JOJFabAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJFabAdd.swift; sourceTree = "<group>"; };
 		C8C00AFC1CD0E93900B4FD41 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -157,12 +163,15 @@
 				C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */,
 				C83056981CDA84A5001D68D3 /* JOJMainToolbar.swift */,
 				C830569A1CDA92CB001D68D3 /* JOJMoreMenuView.swift */,
-				C830569C1CDA96B6001D68D3 /* JOJNewPostBtn.swift */,
+				C830569C1CDA96B6001D68D3 /* JOJFabBtn.swift */,
 				C830569E1CDA9DB0001D68D3 /* JOJSearchBar.swift */,
 				C83056A21CDBE495001D68D3 /* JOJPostCard.swift */,
 				C87B9B6B1CE3E47C002E80E2 /* JOJPNewPostToolbar.swift */,
 				C87B9B6D1CE3E770002E80E2 /* JOJMaterialView.swift */,
 				C87B9B7B1CE50A58002E80E2 /* JOJSignInBtn.swift */,
+				C87B9B7D1CE51109002E80E2 /* JOJMaterialTextField.swift */,
+				C87B9B821CE521FB002E80E2 /* JOJFabCamera.swift */,
+				C87B9B841CE52312002E80E2 /* JOJFabAdd.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,7 +350,9 @@
 			files = (
 				C83056A11CDBDD66001D68D3 /* SearchVC.swift in Sources */,
 				C83056991CDA84A5001D68D3 /* JOJMainToolbar.swift in Sources */,
+				C87B9B7E1CE51109002E80E2 /* JOJMaterialTextField.swift in Sources */,
 				C8FF41FF1CD11343006D6402 /* Post.swift in Sources */,
+				C87B9B831CE521FB002E80E2 /* JOJFabCamera.swift in Sources */,
 				C830569B1CDA92CB001D68D3 /* JOJMoreMenuView.swift in Sources */,
 				C8C00AFD1CD0E93900B4FD41 /* DataService.swift in Sources */,
 				C830569F1CDA9DB0001D68D3 /* JOJSearchBar.swift in Sources */,
@@ -351,11 +362,12 @@
 				C8C00AFF1CD0FBC800B4FD41 /* FeedVC.swift in Sources */,
 				C8C00B011CD0FC5E00B4FD41 /* PostCell.swift in Sources */,
 				C87B9B6C1CE3E47C002E80E2 /* JOJPNewPostToolbar.swift in Sources */,
-				C830569D1CDA96B6001D68D3 /* JOJNewPostBtn.swift in Sources */,
+				C830569D1CDA96B6001D68D3 /* JOJFabBtn.swift in Sources */,
 				C83056A31CDBE495001D68D3 /* JOJPostCard.swift in Sources */,
 				C87B9B6E1CE3E770002E80E2 /* JOJMaterialView.swift in Sources */,
 				C8C20F631CCE3BAA009369AD /* AppDelegate.swift in Sources */,
 				C8C20F841CCE4232009369AD /* Constants.swift in Sources */,
+				C87B9B851CE52312002E80E2 /* JOJFabAdd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

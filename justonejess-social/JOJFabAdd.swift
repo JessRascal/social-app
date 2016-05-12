@@ -1,25 +1,23 @@
 //
-//  JOJNewPostBtn.swift
+//  JOJFabAdd.swift
 //  justonejess-social
 //
-//  Created by Jess Rascal on 04/05/2016.
+//  Created by Jess Rascal on 12/05/2016.
 //  Copyright © 2016 JustOneJess. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Material
 
-class JOJNewPostBtn: FabButton {
+class JOJFabAdd: JOJFabBtn {
     let btnImage: UIImage = MaterialIcon.add!
     
     override func prepareView() {
         super.prepareView()
-        prepareButton()
+        setBtnImage()
     }
     
-    func prepareButton() {
-        depth = .Depth2
-        tintColor = MaterialColor.white
+    func setBtnImage() {
         setImage(btnImage, forState: .Normal)
         setImage(btnImage, forState: .Highlighted)
     }
