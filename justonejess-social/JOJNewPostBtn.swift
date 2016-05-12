@@ -12,11 +12,15 @@ import Material
 class JOJNewPostBtn: FabButton {
     let btnImage: UIImage = MaterialIcon.add!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // Configure the button.
-        self.setImage(btnImage, forState: .Normal)
-        self.setImage(btnImage, forState: .Highlighted)
+    override func prepareView() {
+        super.prepareView()
+        prepareButton()
+    }
+    
+    func prepareButton() {
+        depth = .Depth2
+        tintColor = MaterialColor.white
+        setImage(btnImage, forState: .Normal)
+        setImage(btnImage, forState: .Highlighted)
     }
 }

@@ -11,4 +11,8 @@ import Material
 
 class JOJMoreMenuView: MenuView {
     
+    override func prepareView() {
+        super.prepareView()
+        // DO SOMETHING
+    }
 }

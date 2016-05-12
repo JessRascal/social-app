@@ -113,6 +113,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         performSegueWithIdentifier(SEGUE_SEARCH_VIEW, sender: nil) // CUSTOM TRANSITION TO MAKE IT SLIDE IN FROM THE RIGHT INSTEAD OF FROM BELOW?
     }
     
+    @IBAction func newPostTapped(sender: AnyObject) {
+        performSegueWithIdentifier(SEGUE_NEW_POST, sender: nil)
+    }
+    
+    
 //    @IBAction func makePost(sender: AnyObject) {
 //        if let txt = postField.text where txt != "" {
 //            if let img = imageSelectorImage.image where imageSelected == true {

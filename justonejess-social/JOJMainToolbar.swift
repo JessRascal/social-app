@@ -13,29 +13,39 @@ class JOJMainToolbar: Toolbar {
     let toolbarTitle = UILabel()
     let moreBtn = FlatButton()
     let moreBtnImage: UIImage = MaterialIcon.moreVertical!
-    let searchBtn = FlatButton()
-    let searchBtnImage: UIImage = MaterialIcon.place!
+    let placeBtn = FlatButton()
+    let placeBtnImage: UIImage = MaterialIcon.place!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // Configure controls.
-        configureButton(moreBtn, btnImage: moreBtnImage)
-        configureButton(searchBtn, btnImage: searchBtnImage)
-        
-        // Add controls to toolbar.
-        self.leftControls = [moreBtn]
-        self.rightControls = [searchBtn]
-        
-        // Add button actions.
-        searchBtn.addTarget(nil, action: #selector(FeedVC.placeButtonTapped), forControlEvents: .TouchUpInside) // Best way to do this?
-        
-        // Set title.
-        configureLabel(toolbarTitle)
-        self.titleLabel = toolbarTitle
-        
+    override func prepareView() {
+        super.prepareView()
+        prepareToolbar()
+    }
+    
+    func prepareToolbar() {
         // Set toolbar styles.
-        self.backgroundColor = MaterialColor.teal.base
+        backgroundColor = MaterialColor.teal.base
+        depth = .Depth2
+        statusBarStyle = .LightContent
+        
+        // Configure title.
+        configureLabel(toolbarTitle)
+        titleLabel = toolbarTitle
+        
+        // Configure more button.
+        configureButton(moreBtn, btnImage: moreBtnImage)
+        
+        // Configure place button.
+        configureButton(placeBtn, btnImage: placeBtnImage)
+        
+        // Add place button action.
+        placeBtn.addTarget(nil, action: #selector(FeedVC.placeButtonTapped), forControlEvents: .TouchUpInside) // Best way to do this?
+        
+        // Add buttons to the left.
+        leftControls = [moreBtn]
+        
+        // Add buttons to the right.
+        rightControls = [placeBtn]
+        
     }
     
     func configureButton(btn: FlatButton, btnImage: UIImage) {

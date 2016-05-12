@@ -11,9 +11,12 @@ import Material
 
 class JOJPostCard: ImageCardView {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // NEEDED OR JUST CHANGE THE POSTCARD TO THE ImageCardView CLASS?
+    override func prepareView() {
+        super.prepareView()
+        preparePostCard()
+    }
+    
+    func preparePostCard() {
+        depth = .Depth1
     }
 }

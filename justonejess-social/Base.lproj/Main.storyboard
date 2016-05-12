@@ -39,69 +39,45 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="21g-D6-Lbi" userLabel="firstBtnsSV">
                                         <rect key="frame" x="0.0" y="0.0" width="272" height="106"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agr-n2-9zb" userLabel="facebookBtn" customClass="FabButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agr-n2-9zb" userLabel="facebookBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
-                                                <color key="backgroundColor" red="0.11372549019607843" green="0.9137254901960784" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="X0a-f4-UYs"/>
                                                     <constraint firstAttribute="width" constant="106" id="udV-T3-CQk"/>
                                                 </constraints>
                                                 <state key="normal" image="facebookLogo"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="fbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fi4-u1-12Z"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-cE-BSF" userLabel="twitterBtn" customClass="FabButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-cE-BSF" userLabel="twitterBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
                                                 <rect key="frame" x="166" y="0.0" width="106" height="106"/>
-                                                <color key="backgroundColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="4Iw-wM-h2d"/>
                                                     <constraint firstAttribute="width" constant="106" id="FRV-RC-3CG"/>
                                                 </constraints>
                                                 <state key="normal" image="twitterLogo"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-B8-1kE" userLabel="secondBtnsSV">
                                         <rect key="frame" x="0.0" y="166" width="272" height="106"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-O3-lZb" userLabel="googleBtn" customClass="FabButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-O3-lZb" userLabel="googleBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
-                                                <color key="backgroundColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="106" id="57A-w6-9PQ"/>
                                                     <constraint firstAttribute="height" constant="106" id="z5g-z5-fWe"/>
                                                 </constraints>
                                                 <state key="normal" image="googlePlusLogo"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db4-0P-phN" userLabel="emailBtn" customClass="FabButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db4-0P-phN" userLabel="emailBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
                                                 <rect key="frame" x="166" y="0.0" width="106" height="106"/>
-                                                <color key="backgroundColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="106" id="ZQr-IV-ujG"/>
                                                     <constraint firstAttribute="height" constant="106" id="tFP-Xq-edA"/>
                                                 </constraints>
                                                 <state key="normal" image="emailLogo"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -238,10 +214,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u60-EB-PQw" userLabel="postCard" customClass="CardView" customModule="Material">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="382"/>
+                                                    <rect key="frame" x="8" y="8" width="544" height="382"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Byd-fy-KKe" userLabel="topRowSV">
-                                                            <rect key="frame" x="16" y="16" width="528" height="60"/>
+                                                            <rect key="frame" x="16" y="16" width="512" height="60"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="ia9-GL-Q64" userLabel="profilePicture">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -251,16 +227,16 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yFy-Nc-iR9" userLabel="nameAndDateSV">
-                                                                    <rect key="frame" x="76" y="0.0" width="376" height="60"/>
+                                                                    <rect key="frame" x="76" y="0.0" width="360" height="60"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GenericUsername133" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="qzb-Vn-qLk">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="376" height="30"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:37 • 28 April 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="3Ww-l1-dvY">
-                                                                            <rect key="frame" x="0.0" y="30" width="376" height="30"/>
+                                                                            <rect key="frame" x="0.0" y="30" width="360" height="30"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -268,7 +244,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="qKH-lq-DI8">
-                                                                    <rect key="frame" x="468" y="0.0" width="60" height="60"/>
+                                                                    <rect key="frame" x="452" y="0.0" width="60" height="60"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="ByO-96-Lpj"/>
                                                                         <constraint firstAttribute="width" constant="60" id="fbe-Js-udB"/>
@@ -276,30 +252,27 @@
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="vjW-wb-rsU" userLabel="postImage">
-                                                            <rect key="frame" x="0.0" y="92" width="560" height="191"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-2E-4bL" userLabel="postText">
-                                                            <rect key="frame" x="16" y="299" width="528" height="33"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-2E-4bL" userLabel="postText">
+                                                            <rect key="frame" x="16" y="299" width="512" height="39"/>
                                                             <string key="text">This is the the longest post text can be. It is limited to 140 chars.This is the the longest post text can be. It is limited to 140 chars.</string>
                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4bZ-Qh-6DM" userLabel="commentsAndLikesSV">
-                                                            <rect key="frame" x="16" y="340" width="528" height="21"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4bZ-Qh-6DM" userLabel="commentsAndLikesSV">
+                                                            <rect key="frame" x="16" y="346" width="512" height="20"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-P7-Y5K" userLabel="commentsSV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="21"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-jH-qOe" userLabel="commentsValue">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="21"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMENTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="kFD-Gl-Swf" userLabel="commentsLabel">
-                                                                            <rect key="frame" x="26" y="0.0" width="213" height="21"/>
+                                                                            <rect key="frame" x="25" y="0.0" width="206" height="21"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -315,16 +288,16 @@
                                                                     </variation>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Y4-B6-bPa" userLabel="likesSV">
-                                                                    <rect key="frame" x="289" y="0.0" width="239" height="21"/>
+                                                                    <rect key="frame" x="281" y="0.0" width="231" height="21"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="oJ9-E2-JpM" userLabel="likesLabel">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="153" height="21"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="21"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="82" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-87-req" userLabel="likesValue">
-                                                                            <rect key="frame" x="158" y="0.0" width="81" height="21"/>
+                                                                            <rect key="frame" x="153" y="0.0" width="78" height="21"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -341,6 +314,9 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="vjW-wb-rsU" userLabel="postImage">
+                                                            <rect key="frame" x="0.0" y="92" width="544" height="191"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -367,10 +343,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="u60-EB-PQw" secondAttribute="bottom" constant="16" id="3qC-YA-k3g"/>
-                                                <constraint firstItem="u60-EB-PQw" firstAttribute="leading" secondItem="bad-ol-HIs" secondAttribute="leading" id="9yV-3v-UQY"/>
-                                                <constraint firstAttribute="trailing" secondItem="u60-EB-PQw" secondAttribute="trailing" id="JrE-7O-yE3"/>
-                                                <constraint firstItem="u60-EB-PQw" firstAttribute="top" secondItem="bad-ol-HIs" secondAttribute="top" id="sp3-fb-Fb7"/>
+                                                <constraint firstAttribute="bottom" secondItem="u60-EB-PQw" secondAttribute="bottom" constant="8" id="3qC-YA-k3g"/>
+                                                <constraint firstItem="u60-EB-PQw" firstAttribute="leading" secondItem="bad-ol-HIs" secondAttribute="leading" constant="8" id="9yV-3v-UQY"/>
+                                                <constraint firstAttribute="trailing" secondItem="u60-EB-PQw" secondAttribute="trailing" constant="8" id="JrE-7O-yE3"/>
+                                                <constraint firstItem="u60-EB-PQw" firstAttribute="top" secondItem="bad-ol-HIs" secondAttribute="top" constant="8" id="sp3-fb-Fb7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,6 +376,9 @@
                                         <color key="value" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="newPostTapped:" destination="Tvc-Wa-oil" eventType="touchUpInside" id="8i6-4e-jBd"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGb-PK-oRv" customClass="JOJMainToolbar" customModule="justonejess_social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
@@ -435,6 +414,7 @@
                         <outlet property="tableView" destination="BV3-Zv-bMf" id="JDd-66-25Q"/>
                         <outlet property="toolbar" destination="tGb-PK-oRv" id="EVs-Z4-5LQ"/>
                         <segue destination="Jlm-3h-xya" kind="show" identifier="showSearch" id="nrg-bL-2GL"/>
+                        <segue destination="m21-SJ-jAU" kind="show" identifier="showNewPost" id="mld-vc-1gq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbs-yX-9pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -472,12 +452,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRf-zB-5ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981" y="479"/>
+            <point key="canvasLocation" x="2053" y="161"/>
+        </scene>
+        <!--New PostVC-->
+        <scene sceneID="k2d-kS-38B">
+            <objects>
+                <viewController id="m21-SJ-jAU" customClass="NewPostVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AgW-lo-nRd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wjh-Oi-TUI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nFG-vq-j8u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aP1-ea-XnC" customClass="JOJMaterialView" customModule="justonejess_social" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BBz-xV-5Nl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-bN-0tz" customClass="JOJNewPostToolbar" customModule="justonejess_social" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="51u-rc-mRi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aP1-ea-XnC" firstAttribute="top" secondItem="wYY-bN-0tz" secondAttribute="bottom" id="20k-9Y-m3b"/>
+                            <constraint firstItem="aP1-ea-XnC" firstAttribute="leading" secondItem="nFG-vq-j8u" secondAttribute="leading" id="K5I-vL-4H2"/>
+                            <constraint firstAttribute="trailing" secondItem="wYY-bN-0tz" secondAttribute="trailing" id="OiV-Gb-ACd"/>
+                            <constraint firstItem="wYY-bN-0tz" firstAttribute="leading" secondItem="nFG-vq-j8u" secondAttribute="leading" id="bZc-4O-uK7"/>
+                            <constraint firstItem="wYY-bN-0tz" firstAttribute="top" secondItem="nFG-vq-j8u" secondAttribute="top" id="pzZ-bP-gIb"/>
+                            <constraint firstAttribute="trailing" secondItem="aP1-ea-XnC" secondAttribute="trailing" id="vYX-tZ-pPb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Rh-ng-mlt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053" y="833"/>
         </scene>
     </scenes>
     <resources>
         <image name="emailLogo" width="41" height="42"/>
-        <image name="empty-heart" width="61" height="56"/>
+        <image name="empty-heart" width="60" height="60"/>
         <image name="facebookLogo" width="23" height="44"/>
         <image name="googlePlusLogo" width="39" height="38"/>
         <image name="profile" width="100" height="104"/>
