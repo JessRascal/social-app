@@ -50,7 +50,7 @@
                                                 </constraints>
                                                 <state key="normal" image="facebookLogo"/>
                                                 <connections>
-                                                    <action selector="fbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fi4-u1-12Z"/>
+                                                    <action selector="fbBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CcU-sc-XQ1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-cE-BSF" userLabel="twitterBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
@@ -60,6 +60,9 @@
                                                     <constraint firstAttribute="width" constant="106" id="FRV-RC-3CG"/>
                                                 </constraints>
                                                 <state key="normal" image="twitterLogo"/>
+                                                <connections>
+                                                    <action selector="twitterBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6S4-dw-WkQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -263,7 +266,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4bZ-Qh-6DM" userLabel="commentsAndLikesSV">
-                                                            <rect key="frame" x="16" y="338" width="536" height="12"/>
+                                                            <rect key="frame" x="16" y="338" width="536" height="13"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-P7-Y5K" userLabel="commentsSV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="243" height="13"/>
@@ -300,7 +303,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="82" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-87-req" userLabel="likesValue">
-                                                                            <rect key="frame" x="161" y="0.0" width="82" height="13"/>
+                                                                            <rect key="frame" x="161" y="0.0" width="83" height="13"/>
                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
