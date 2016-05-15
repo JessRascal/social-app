@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -24,24 +24,29 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
         // Attempt to sign in silently, this will succeed if
         // the user has recently been authenticated.
-        GIDSignIn.sharedInstance().signInSilently()
+//        GIDSignIn.sharedInstance().signInSilently() // Disabled because the app controls the auto sign ins.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
-        }
+//        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
+//            goToMainScreen()
+//        }
     }
+    
+    
     
     // Facebook login.
     @IBAction func fbBtnTapped(sender: UIButton!) {
+        
         let facebookLogin = FBSDKLoginManager()
         
         facebookLogin.logInWithReadPermissions(["email"], fromViewController: self, handler: { facebookResult, facebookError -> Void in
+            
             if facebookError != nil {
                 print("Facebook login failed - \(facebookError)")
+                self.displayOkAlert("Facebook Login Failed", message: facebookError.localizedDescription)
             } else if facebookResult.isCancelled {
                 print("Facebook login was cancelled")
             } else {
@@ -49,23 +54,27 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                 
                 DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
                     if error != nil {
-                        print("Facebook login failed. \(error)")
+                        print("Unable to authenticate Facebook login")
+                        self.displayOkAlert("Facebook Login Failed", message: error.localizedDescription)
                     } else {
                         print("Facebook account successfully logged in")
                         
-                        // Create a new user if the user doesn't already exist.
+                        // Attempt to create a new user (will just perform required updates if user already exists).
                         self.createNewUser(authData.uid, provider: authData.provider)
-                            
+                        
                         // Store the authData uid to the UserDefaults so it is retained when the app is closed.
                         self.saveUserId(authData.uid)
                         
-                        // Take the logged in user to the main screen.
-                        self.goToMainScreen()
+                        // Take the logged in user to the feed screen.
+                        self.goToFeedVC()
                     }
                 })
             }
-            })
+        })
     }
+    // Facebook login end.
+    
+    
     
     // Twitter Login
     @IBAction func twitterBtnTapped(sender: UIButton!) {
@@ -74,7 +83,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             
             if error != nil {
                 print("Unable to retrieve the Twitter accounts")
-                self.displayOkAlert("Error", message: error.localizedDescription, style: .Alert)
+                self.displayOkAlert("Twitter Login Failed", message: error.localizedDescription)
             } else if accounts.count == 1 {
                 
                 // Get the Twitter account.
@@ -85,18 +94,18 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                     
                     if error != nil {
                         print("Unable to authenticate the selected Twitter account")
-                        self.displayOkAlert("Error", message: error.localizedDescription, style: .Alert)
+                        self.displayOkAlert("Error", message: error.localizedDescription)
                     } else {
                         print("Twitter account successfully logged in")
                         
-                        // Create a new user if the user doesn't already exist.
+                        // Attempt to create a new user (will just perform required updates if user already exists).
                         self.createNewUser(authData.uid, provider: authData.provider)
                         
                         // Store the authData uid to the UserDefaults so it is retained when the app is closed.
                         self.saveUserId(authData.uid)
                         
-                        // Take the logged in user to the main screen.
-                        self.goToMainScreen()
+                        // Take the logged in user to the feed screen.
+                        self.goToFeedVC()
                     }
                 })
             } else if accounts.count > 1 {
@@ -120,18 +129,18 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                                     
                                     if error != nil {
                                         print("Unable to authenticate the selected Twitter account")
-                                        self.displayOkAlert("Error", message: error.localizedDescription, style: .Alert)
+                                        self.displayOkAlert("Twitter Login Failed", message: error.localizedDescription)
                                     } else {
                                         print("Twitter account successfully logged in")
                                         
-                                        // Create a new user if the user doesn't already exist.
+                                        // Attempt to create a new user (will just perform required updates if user already exists).
                                         self.createNewUser(authData.uid, provider: authData.provider)
                                         
                                         // Store the authData uid to the UserDefaults so it is retained when the app is closed.
                                         self.saveUserId(authData.uid)
                                         
-                                        // Take the logged in user to the main screen.
-                                        self.goToMainScreen()
+                                        // Take the logged in user to the feed screen.
+                                        self.goToFeedVC()
                                     }
                                     
                                 })
@@ -144,6 +153,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             }
         })
     }
+    // Twitter login end.
+    
+    
     
     // Google login.
     @IBAction func googleBtnTapped(sender: UIButton!) {
@@ -157,53 +169,29 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             DataService.ds.REF_BASE.authWithOAuthProvider("google", token: user.authentication.accessToken, withCompletionBlock: { error, authData in
                 print("Google account successfully logged in")
                 
-                // Create a new user if the user doesn't already exist.
+                // Attempt to create a new user (will just perform required updates if user already exists).
                 self.createNewUser(authData.uid, provider: authData.provider)
                 
                 // Store the authData uid to the UserDefaults so it is retained when the app is closed.
                 self.saveUserId(authData.uid)
                 
-                // Take the logged in user to the main screen.
-                self.goToMainScreen()
+                // Take the logged in user to the feed screen.
+                self.goToFeedVC()
             })
         } else {
-            displayOkAlert("Error", message: error.localizedDescription, style: .Alert)
+            displayOkAlert("Error", message: error.localizedDescription)
+            print("Google sign in error\(error.localizedDescription)")
         }
     }
     
     // Unauth when disconnected from Google
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
-        DataService.ds.REF_BASE.unauth()
+        //        DataService.ds.REF_BASE.unauth()
+        logOut()
     }
+    // Google login end.
     
-    func createNewUser(uid: String, provider: String) {
-        let userData = ["provider": provider]
-        DataService.ds.createFirebaseUser(uid, user: userData)
-    }
     
-    func saveUserId(uid: String) {
-        NSUserDefaults.standardUserDefaults().setValue(uid, forKey: KEY_UID)
-    }
-    
-    func goToMainScreen() {
-        performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
-    }
-    
-    func displayOkAlert(title: String, message: String, style: UIAlertControllerStyle) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func logOut() {
-        // Sign out of Google.
-        GIDSignIn.sharedInstance().signOut()
-        // Unauthenticate the user.
-        DataService.ds.REF_USER_CURRENT.unauth()
-        // Clear the saved UID in the user defaults.
-        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
-    }
     
     // Email login. // REFACTOR ONCE NEW EMAIL LOGIN WORKFLOW IS CREATED.
     @IBAction func attemptLogin(sender: UIButton!) {
@@ -217,8 +205,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                     if error.code == STATUS_ACCOUNT_NONEXIST {
                         DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { (error, result) in
                             
-                            if error != nil {
-                                self.showErrorAlert("Could Not Create Account", msg: "Problem creating the account. Try something else")
+                            if error != nil { // INCLUDE ALL SCENARIOS.
+                                self.displayOkAlert("Could Not Create Account", message: "Problem creating the account. Try something else")
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
@@ -232,7 +220,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                             
                         })
                     } else {
-                        self.showErrorAlert("Could Not Log In", msg: "Please check your username and password.")
+                        self.displayOkAlert("Could Not Log In", message: "Please check your username and password.")
                     }
                 } else {
                     self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
@@ -241,15 +229,43 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             })
             
         } else {
-            showErrorAlert("Email and Password Required", msg: "You must enter an email and password.")
+            displayOkAlert("Email and Password Required", message: "You must enter an email and password.")
         }
     }
+    // Email login end.
     
-    func showErrorAlert(title: String, msg: String) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+    
+    
+    // Alert functions.
+    func displayOkAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    // Login helper functions.
+    func createNewUser(uid: String, provider: String) {
+        let userData = ["provider": provider]
+        DataService.ds.createFirebaseUser(uid, user: userData)
+    }
+    
+    func saveUserId(uid: String) {
+        NSUserDefaults.standardUserDefaults().setValue(uid, forKey: KEY_UID)
+    }
+    
+    func goToFeedVC() {
+        performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+    }
+    
+    // Log out the user.
+    func logOut() {
+        // Sign out of Google.
+        GIDSignIn.sharedInstance().signOut()
+        // Unauthenticate the user.
+        DataService.ds.REF_USER_CURRENT.unauth()
+        // Clear the saved UID in the user defaults.
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
     }
     
 }

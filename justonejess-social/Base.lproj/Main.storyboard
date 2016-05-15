@@ -24,10 +24,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--SignInVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="BYZ-38-t0r" userLabel="SignInVC" customClass="SignInVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -197,12 +197,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="479"/>
+            <point key="canvasLocation" x="494" y="479"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="JP7-do-uck">
             <objects>
-                <viewController id="Tvc-Wa-oil" customClass="FeedVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedVC" id="Tvc-Wa-oil" customClass="FeedVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5HJ-RG-bgI"/>
                         <viewControllerLayoutGuide type="bottom" id="2WQ-ZR-bXg"/>

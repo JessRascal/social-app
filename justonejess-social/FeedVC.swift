@@ -15,11 +15,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var toolbar: JOJMainToolbar! // NEEDED???
     @IBOutlet weak var tableView: UITableView!
+    
     var posts = [Post]()
     var imageSelected = false
     static var imageCache = NSCache()
     
-//    @IBOutlet weak var postField: MaterialTextField!
     @IBOutlet weak var imageSelectorImage: UIImageView!
     
     var imagePicker: UIImagePickerController!

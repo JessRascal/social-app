@@ -37,6 +37,7 @@ class DataService {
     }
     
     func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
-        REF_USERS.childByAppendingPath(uid).setValue(user)
+        // Update the user's data in Firebase or create it if it doesn't already exist.
+        REF_USERS.childByAppendingPath(uid).updateChildValues(user)
     }
 }

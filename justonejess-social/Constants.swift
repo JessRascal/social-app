@@ -22,4 +22,5 @@ let SEGUE_NEW_POST = "showNewPost"
 // Status codes
 let STATUS_ACCOUNT_NONEXIST = -8
 
+// Helpers
 let TWITTER_AUTH_HELPER = TwitterAuthHelper(firebaseRef: DataService.ds.REF_BASE, apiKey: TWITTER_API_KEY)

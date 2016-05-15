@@ -19,6 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Set the initial view controller (depends on if the user has a uid saved in their userDefaults).
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var initialVC: String!
+        // Determine the initial view controller.
+        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
+            // Set the initial VC to the FeedVC.
+            initialVC = "FeedVC"
+        } else {
+            // Set the initial VC to the SignInVC.
+            initialVC = "SignInVC"
+        }
+        
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier(initialVC)
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         // Configure Google Sign-In
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
