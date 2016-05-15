@@ -7,6 +7,7 @@ target 'justonejess-social' do
 pod 'Firebase', '>= 2.5.1'
 pod 'Alamofire', '~> 3.3'
 pod 'Material', '~> 1.0'
+pod 'Google/SignIn'
 
 end
 

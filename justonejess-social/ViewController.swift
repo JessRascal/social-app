@@ -10,13 +10,21 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup delegates.
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Attempt to sign in silently, this will succeed if
+        // the user has recently been authenticated.
+        GIDSignIn.sharedInstance().signInSilently()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -43,7 +51,7 @@ class ViewController: UIViewController {
                     if error != nil {
                         print("Facebook login failed. \(error)")
                     } else {
-                        print("Facebook login successful - \(authData)")
+                        print("Facebook account successfully logged in")
                         
                         // Create a new user if the user doesn't already exist.
                         self.createNewUser(authData.uid, provider: authData.provider)
@@ -137,6 +145,37 @@ class ViewController: UIViewController {
         })
     }
     
+    // Google login.
+    @IBAction func googleBtnTapped(sender: UIButton!) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    // Implement the required GIDSignInDelegate methods (Google).
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if error == nil {
+            // Auth with Firebase
+            DataService.ds.REF_BASE.authWithOAuthProvider("google", token: user.authentication.accessToken, withCompletionBlock: { error, authData in
+                print("Google account successfully logged in")
+                
+                // Create a new user if the user doesn't already exist.
+                self.createNewUser(authData.uid, provider: authData.provider)
+                
+                // Store the authData uid to the UserDefaults so it is retained when the app is closed.
+                self.saveUserId(authData.uid)
+                
+                // Take the logged in user to the main screen.
+                self.goToMainScreen()
+            })
+        } else {
+            displayOkAlert("Error", message: error.localizedDescription, style: .Alert)
+        }
+    }
+    
+    // Unauth when disconnected from Google
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+        DataService.ds.REF_BASE.unauth()
+    }
+    
     func createNewUser(uid: String, provider: String) {
         let userData = ["provider": provider]
         DataService.ds.createFirebaseUser(uid, user: userData)
@@ -158,7 +197,11 @@ class ViewController: UIViewController {
     }
     
     func logOut() {
+        // Sign out of Google.
+        GIDSignIn.sharedInstance().signOut()
+        // Unauthenticate the user.
         DataService.ds.REF_USER_CURRENT.unauth()
+        // Clear the saved UID in the user defaults.
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
     }
     

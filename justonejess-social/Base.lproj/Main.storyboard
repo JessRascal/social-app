@@ -76,6 +76,9 @@
                                                     <constraint firstAttribute="height" constant="106" id="z5g-z5-fWe"/>
                                                 </constraints>
                                                 <state key="normal" image="googlePlusLogo"/>
+                                                <connections>
+                                                    <action selector="googleBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A6J-mt-tCX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db4-0P-phN" userLabel="emailBtn" customClass="JOJSignInBtn" customModule="justonejess_social" customModuleProvider="target">
                                                 <rect key="frame" x="166" y="0.0" width="106" height="106"/>

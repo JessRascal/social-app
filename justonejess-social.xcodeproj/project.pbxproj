@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F0E96F632B70DE060FE7C7B /* Pods_justonejess_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */; };
 		C803A1171CE7EA600088F217 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C803A1161CE7EA600088F217 /* TwitterAuthHelper.m */; };
+		C803A1191CE8024E0088F217 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C803A1181CE8024E0088F217 /* GoogleService-Info.plist */; };
 		C83056991CDA84A5001D68D3 /* JOJMainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83056981CDA84A5001D68D3 /* JOJMainToolbar.swift */; };
 		C830569B1CDA92CB001D68D3 /* JOJMoreMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569A1CDA92CB001D68D3 /* JOJMoreMenuView.swift */; };
 		C830569D1CDA96B6001D68D3 /* JOJFabBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830569C1CDA96B6001D68D3 /* JOJFabBtn.swift */; };
@@ -47,6 +48,7 @@
 		C803A1141CE7EA5F0088F217 /* justonejess-social-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "justonejess-social-Bridging-Header.h"; sourceTree = "<group>"; };
 		C803A1151CE7EA600088F217 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
 		C803A1161CE7EA600088F217 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
+		C803A1181CE8024E0088F217 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C83056981CDA84A5001D68D3 /* JOJMainToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMainToolbar.swift; sourceTree = "<group>"; };
 		C830569A1CDA92CB001D68D3 /* JOJMoreMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJMoreMenuView.swift; sourceTree = "<group>"; };
 		C830569C1CDA96B6001D68D3 /* JOJFabBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOJFabBtn.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				C8C20F661CCE3BAA009369AD /* Main.storyboard */,
 				C8C20F691CCE3BAA009369AD /* Assets.xcassets */,
 				C8C20F6B1CCE3BAA009369AD /* LaunchScreen.storyboard */,
+				C803A1181CE8024E0088F217 /* GoogleService-Info.plist */,
 				C8C20F6E1CCE3BAA009369AD /* Info.plist */,
 			);
 			path = "justonejess-social";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C20F7C1CCE3C10009369AD /* NotoSans-Bold.ttf in Resources */,
+				C803A1191CE8024E0088F217 /* GoogleService-Info.plist in Resources */,
 				C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */,
 				C8C20F7D1CCE3C10009369AD /* NotoSans-BoldItalic.ttf in Resources */,
 				C8C20F7E1CCE3C10009369AD /* NotoSans-Italic.ttf in Resources */,
