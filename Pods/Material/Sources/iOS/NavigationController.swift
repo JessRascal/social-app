@@ -73,8 +73,11 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 		super.viewWillAppear(animated)
 		if let v: UIGestureRecognizer = interactivePopGestureRecognizer {
 			if let x: SideNavigationController = sideNavigationController {
-				if let p: UIPanGestureRecognizer = x.panGesture {
-					p.requireGestureRecognizerToFail(v)
+				if let l: UIPanGestureRecognizer = x.leftPanGesture {
+					l.requireGestureRecognizerToFail(v)
+				}
+				if let r: UIPanGestureRecognizer = x.rightPanGesture {
+					r.requireGestureRecognizerToFail(v)
 				}
 			}
 		}
@@ -111,15 +114,21 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 	*/
 	public func navigationBar(navigationBar: UINavigationBar, shouldPushItem item: UINavigationItem) -> Bool {
 		if let v: NavigationBar = navigationBar as? NavigationBar {
-			item.setHidesBackButton(true, animated: false)
+			let backButton: IconButton = IconButton()
+			backButton.pulseColor = MaterialColor.white
+			backButton.setImage(v.backButtonImage, forState: .Normal)
+			backButton.setImage(v.backButtonImage, forState: .Highlighted)
+			backButton.addTarget(self, action: #selector(handleBackButton), forControlEvents: .TouchUpInside)
+			
 			if var c: Array<UIControl> = item.leftControls {
-				c.append(v.backButton)
+				c.append(backButton)
 				item.leftControls = c
 			} else {
-				item.leftControls = [v.backButton]
+				item.leftControls = [backButton]
 			}
-			v.backButton.removeTarget(self, action: #selector(handleBackButton), forControlEvents: .TouchUpInside)
-			v.backButton.addTarget(self, action: #selector(handleBackButton), forControlEvents: .TouchUpInside)
+			
+			item.backButton = backButton
+			item.hidesBackButton = true
 			v.layoutNavigationItem(item)
 		}
 		return true
@@ -130,8 +139,15 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 		popViewControllerAnimated(true)
 	}
 	
-	/// Prepares the view.
-	private func prepareView() {
+	/**
+	Prepares the view instance when intialized. When subclassing,
+	it is recommended to override the prepareView method
+	to initialize property values and other setup operations.
+	The super.prepareView method should always be called immediately
+	when subclassing.
+	*/
+	public func prepareView() {
 		view.clipsToBounds = true
+		view.contentScaleFactor = MaterialDevice.scale
 	}
 }

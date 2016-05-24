@@ -35,7 +35,7 @@ public class SearchBar : StatusBarView {
 	public private(set) var textField: UITextField!
 	
 	/// Reference to the clearButton.
-	public private(set) var clearButton: FlatButton!
+	public private(set) var clearButton: IconButton!
 	
 	/// Handle the clearButton manually.
 	@IBInspectable public var clearButtonAutoHandleEnabled: Bool = true {
@@ -93,15 +93,20 @@ public class SearchBar : StatusBarView {
 	public override func layoutSubviews() {
 		super.layoutSubviews()
 		if willRenderView {
-			contentView.grid.views?.append(textField)
-			contentView.grid.reloadLayout()
+			textField.frame = contentView.bounds
 			layoutClearButton()
 		}
 	}
 	
-	/// Prepares the contentView.
-	public override func prepareContentView() {
-		super.prepareContentView()
+	/**
+	Prepares the view instance when intialized. When subclassing,
+	it is recommended to override the prepareView method
+	to initialize property values and other setup operations.
+	The super.prepareView method should always be called immediately
+	when subclassing.
+	*/
+	public override func prepareView() {
+		super.prepareView()
 		prepareTextField()
 		prepareClearButton()
 	}
@@ -126,11 +131,8 @@ public class SearchBar : StatusBarView {
 	/// Prepares the clearButton.
 	private func prepareClearButton() {
 		let image: UIImage? = MaterialIcon.cm.close
-		clearButton = FlatButton()
+		clearButton = IconButton()
 		clearButton.contentEdgeInsets = UIEdgeInsetsZero
-		clearButton.pulseColor = MaterialColor.black
-		clearButton.pulseOpacity = 0.12
-		clearButton.pulseScale = false
 		clearButton.tintColor = placeholderTextColor
 		clearButton.setImage(image, forState: .Normal)
 		clearButton.setImage(image, forState: .Highlighted)

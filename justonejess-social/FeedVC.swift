@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Alamofire
+//import Alamofire
 import Material
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -24,6 +24,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     var imagePicker: UIImagePickerController!
     
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+    
+//        let sideVC = storyboard!.instantiateViewControllerWithIdentifier(SIDE_NAV_VC) as! SideNavVC
+//        SideNavigationController(rootViewController: self, leftViewController: sideVC)
+//        AppDelegate.rootViewController = SideNavigationController(rootViewController: self, leftViewController: sideVC)
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("tabBarcontroller") as! UITabBarController
+//        UIApplication.sharedApplication().keyWindow?.rootViewController = SideNavigationController(rootViewController: self, leftViewController: sideVC)
+        
+        
+//            }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,14 +48,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
+        DataService.ds.REF_BASE.child("posts").observeEventType(.Value, withBlock: { snapshot in
+//            print(snapshot.value)
             
             self.posts = []
             
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
-//                    print("SNAP: \(snap)")
+                    print("SNAP: \(snap)")
                     
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
@@ -111,6 +124,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func placeButtonTapped() {
         performSegueWithIdentifier(SEGUE_SEARCH_VIEW, sender: nil) // CUSTOM TRANSITION TO MAKE IT SLIDE IN FROM THE RIGHT INSTEAD OF FROM BELOW?
+    }
+    
+    func menuButtonTapped() {
+        sideNavigationController?.toggleLeftView()
     }
     
     @IBAction func newPostTapped(sender: AnyObject) {

@@ -74,10 +74,10 @@ public class StatusBarView : ControlView {
 			width = MaterialDevice.width
 		}
 		
-		grid.axis.columns = Int(width / 56)
+		grid.axis.columns = Int(width / 24)
 		
 		// General alignment.
-		if .iPhone == MaterialDevice.type && MaterialDevice.landscape {
+		if .iPhone == MaterialDevice.type && MaterialDevice.isLandscape {
 			if heightForStatusBar == rotationFactor {
 				contentInset.top -= rotationFactor
 				rotationFactor = 0
@@ -96,7 +96,7 @@ public class StatusBarView : ControlView {
 	}
 	
 	public override func intrinsicContentSize() -> CGSize {
-		return CGSizeMake(MaterialDevice.width, .iPhone == MaterialDevice.type && MaterialDevice.landscape ? heightForLandscapeOrientation : heightForPortraitOrientation)
+		return CGSizeMake(MaterialDevice.width, .iPhone == MaterialDevice.type && MaterialDevice.isLandscape ? heightForLandscapeOrientation : heightForPortraitOrientation)
 	}
 	
 	/**

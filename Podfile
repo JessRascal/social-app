@@ -4,10 +4,15 @@
 use_frameworks!
 
 target 'justonejess-social' do
-pod 'Firebase', '>= 2.5.1'
-pod 'Alamofire', '~> 3.3'
-pod 'Material', '~> 1.0'
-pod 'Google/SignIn'
+pod 'Alamofire'
+pod 'Material', '1.41.1'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Crash'
+pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+pod 'GoogleSignIn'
+pod 'TwitterKit'
 
 end
 

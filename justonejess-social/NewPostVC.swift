@@ -9,7 +9,7 @@
 import UIKit
 
 class NewPostVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

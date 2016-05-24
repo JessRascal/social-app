@@ -84,6 +84,7 @@ To help template your project, checkout our latest addition, Material Sticker Sh
 #### Text
 
 * [TextField](#textfield)
+* ErrorTextField
 * [TextView](#textview)
 
 #### Buttons
@@ -194,7 +195,7 @@ under the TextField.
 
 ![MaterialTextField](http://www.cosmicmind.io/MK/MaterialTextField.gif)
 
-[Learn More About TextField](https://github.com/CosmicMind/Material/wiki/TextField)
+[Learn More About TextField](http://cosmicmind.sandbox.local/material/textfield)
 
 <a name="textview"></a>
 #### TextView

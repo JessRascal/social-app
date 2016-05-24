@@ -40,7 +40,7 @@ class JOJSearchBar: SearchBar {
     }
     
     func configureButton(btn: FlatButton, btnImage: UIImage) {
-        btn.pulseScale = false
+//        btn.pulseScale = false
 //        btn.pulseColor = MaterialColor.black // NEEDS ALPHA 87% OR 54%
 //        btn.tintColor = MaterialColor.black // NEEDS ALPHA 87% OR 54%
         btn.pulseColor = MaterialColor.grey.base

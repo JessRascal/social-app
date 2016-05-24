@@ -20,7 +20,7 @@ class PostCell: UITableViewCell {
     
     var post: Post!
     var request: Request?
-    var likeRef: Firebase!
+    var likeRef = DataService.ds.REF_BASE.child("likes")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +46,8 @@ class PostCell: UITableViewCell {
     
     func configureCell(post: Post, img: UIImage?) {
         self.post = post
-        likeRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
+//        likeRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
+        likeRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
         
         self.postText.text = post.postDescription
         self.likesValue.text = "\(post.likes)"

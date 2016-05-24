@@ -20,11 +20,11 @@ class JOJMaterialTextField: TextField {
         textColor = MaterialColor.white
         
         // Field inactive.
-        lineLayerColor = MaterialColor.teal.accent4
-        titleLabelColor = MaterialColor.teal.accent4
+//        lineLayerColor = MaterialColor.teal.accent4
+//        titleLabelColor = MaterialColor.teal.accent4
         
         // Field active.
-        lineLayerActiveColor = MaterialColor.teal.accent3
-        titleLabelActiveColor = MaterialColor.teal.accent3
+//        lineLayerActiveColor = MaterialColor.teal.accent3
+//        titleLabelActiveColor = MaterialColor.teal.accent3
     }
 }

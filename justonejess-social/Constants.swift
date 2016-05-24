@@ -18,9 +18,13 @@ let TWITTER_API_KEY = "J9jqv3tWEOycMo4wjAXVPw1jC"
 let SEGUE_LOGGED_IN = "loggedIn"
 let SEGUE_SEARCH_VIEW = "showSearch"
 let SEGUE_NEW_POST = "showNewPost"
+let SEGUE_LOGGED_OUT = "loggedOut"
 
 // Status codes
 let STATUS_ACCOUNT_NONEXIST = -8
 
 // Helpers
 let TWITTER_AUTH_HELPER = TwitterAuthHelper(firebaseRef: DataService.ds.REF_BASE, apiKey: TWITTER_API_KEY)
+
+// Storyboard IDs
+let SIDE_NAV_VC = "SideNavVC"

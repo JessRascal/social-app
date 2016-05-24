@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -24,10 +24,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--SignInVC-->
+        <!--AuthVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SignInVC" id="BYZ-38-t0r" userLabel="SignInVC" customClass="SignInVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" id="BYZ-38-t0r" userLabel="AuthVC" customClass="AuthVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -419,6 +419,61 @@
             </objects>
             <point key="canvasLocation" x="1290" y="479"/>
         </scene>
+        <!--SideNavVC-->
+        <scene sceneID="q4B-hG-h3c">
+            <objects>
+                <viewController storyboardIdentifier="SideNavVC" id="0eu-IP-Tcf" userLabel="SideNavVC" customClass="SideNavVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tbZ-xg-XsU"/>
+                        <viewControllerLayoutGuide type="bottom" id="5XG-6P-UjA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gxV-oQ-rRa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="0PO-xC-rqS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHy-WM-wkh">
+                                <rect key="frame" x="270" y="196" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rSs-be-cn9"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutBtnTapped:" destination="0eu-IP-Tcf" eventType="touchUpInside" id="bNR-nZ-eyK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RHy-WM-wkh" firstAttribute="centerX" secondItem="gxV-oQ-rRa" secondAttribute="centerX" id="3UR-5D-taO"/>
+                            <constraint firstItem="RHy-WM-wkh" firstAttribute="top" secondItem="0PO-xC-rqS" secondAttribute="bottom" constant="16" id="8jd-1R-PaB"/>
+                            <constraint firstItem="0PO-xC-rqS" firstAttribute="leading" secondItem="gxV-oQ-rRa" secondAttribute="leading" id="efy-7K-dIx"/>
+                            <constraint firstAttribute="trailing" secondItem="0PO-xC-rqS" secondAttribute="trailing" id="gEf-nC-sgy"/>
+                            <constraint firstAttribute="trailing" secondItem="RHy-WM-wkh" secondAttribute="trailing" constant="250" id="l8e-1O-6zk"/>
+                            <constraint firstItem="0PO-xC-rqS" firstAttribute="top" secondItem="gxV-oQ-rRa" secondAttribute="top" id="mru-xd-Z7k"/>
+                            <constraint firstItem="0PO-xC-rqS" firstAttribute="height" secondItem="gxV-oQ-rRa" secondAttribute="height" multiplier="0.3" id="pu1-km-p4W"/>
+                            <constraint firstItem="RHy-WM-wkh" firstAttribute="leading" secondItem="gxV-oQ-rRa" secondAttribute="leading" constant="250" id="xvr-Fr-DhU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="l8e-1O-6zk"/>
+                                <exclude reference="xvr-Fr-DhU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loggedOut" id="3oR-Ow-aum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcH-EJ-aze" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="1186"/>
+        </scene>
         <!--SearchVC-->
         <scene sceneID="0Mp-Vf-aoj">
             <objects>
@@ -451,10 +506,10 @@
             </objects>
             <point key="canvasLocation" x="2053" y="161"/>
         </scene>
-        <!--New PostVC-->
+        <!--NewPostVC-->
         <scene sceneID="k2d-kS-38B">
             <objects>
-                <viewController id="m21-SJ-jAU" customClass="NewPostVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m21-SJ-jAU" userLabel="NewPostVC" customClass="NewPostVC" customModule="justonejess_social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AgW-lo-nRd"/>
                         <viewControllerLayoutGuide type="bottom" id="Wjh-Oi-TUI"/>
@@ -559,6 +614,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="50" height="50"/>
         <image name="emailLogo" width="41" height="42"/>
         <image name="empty-heart" width="60" height="60"/>
         <image name="facebookLogo" width="23" height="44"/>

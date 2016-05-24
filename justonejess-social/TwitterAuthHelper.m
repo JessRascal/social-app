@@ -3,6 +3,7 @@
 //  Login Demo
 //
 //  Created by Katherine Fang on 9/30/14.
+//  Updated by Jess Rascal on 5/19/16 (for Firebase SDK v3).
 //  Copyright (c) 2014 Firebase. All rights reserved.
 //
 
@@ -11,7 +12,8 @@
 
 @interface TwitterAuthHelper ()
 @property (strong, nonatomic) ACAccount *account;
-@property (nonatomic, copy) void (^userCallback)(NSError *, FAuthData *);
+//@property (nonatomic, copy) void (^userCallback)(NSError *, FAuthData *);
+@property (nonatomic, copy) void (^userCallback)(NSError *, FIRUser *);
 @end
 
 @implementation TwitterAuthHelper
@@ -23,7 +25,8 @@
 @synthesize accounts;
 @synthesize userCallback;
 
-- (id) initWithFirebaseRef:(Firebase *)aRef apiKey:(NSString *)anApiKey {
+//- (id) initWithFirebaseRef:(Firebase *)aRef apiKey:(NSString *)anApiKey {
+- (id) initWithFirebaseRef:(FIRDatabaseReference *)aRef apiKey:(NSString *)anApiKey {
     self = [super init];
     if (self) {
         self.store = [[ACAccountStore alloc] init];
@@ -64,7 +67,8 @@
 }
 
 // Last public facing method
-- (void) authenticateAccount:(ACAccount *)anAccount withCallback:(void (^)(NSError *error, FAuthData *authData))callback {
+//- (void) authenticateAccount:(ACAccount *)anAccount withCallback:(void (^)(NSError *error, FAuthData *authData))callback {
+- (void) authenticateAccount:(ACAccount *)anAccount withCallback:(void (^)(NSError *error, FIRUser *user))callback {
     if (!anAccount) {
         NSError *error = [[NSError alloc] initWithDomain:@"TwitterAuthHelper"
                                                     code:AuthHelperErrorAccountAccessDenied
@@ -73,26 +77,29 @@
     } else {
         self.account = anAccount;
         self.userCallback = callback;
-        [self makeReverseRequest]; // kick off step 1b
+//        [self makeReverseRequest]; // kick off step 1b
     }
 }
 
-- (void) callbackIfExistsWithError:(NSError *)error authData:(FAuthData *)authData {
+//- (void) callbackIfExistsWithError:(NSError *)error authData:(FAuthData *)authData {
+- (void) callbackIfExistsWithError:(NSError *)error authData:(FIRUser *)user {
     if (self.userCallback) {
-        self.userCallback(error, authData);
+//        self.userCallback(error, authData);
+        self.userCallback(error, user);
     }
 }
 
 // Step 1b -- get request token from Twitter
 - (void) makeReverseRequest {
-    [self.ref makeReverseOAuthRequestTo:@"twitter" withCompletionBlock:^(NSError *error, NSDictionary *json) {
-        if (error) {
-            [self callbackIfExistsWithError:error authData:nil];
-        } else {
-            SLRequest *request = [self createCredentialRequestWithReverseAuthPayload:json];
-            [self requestTwitterCredentials:request];
-        }
-    }];
+//    [self.ref makeReverseOAuthRequestTo:@"twitter" withCompletionBlock:^(NSError *error, NSDictionary *json) {
+//    [FIRAuthCredential makeReverseOAuthRequestTo:@"twitter" withCompletionBlock:^(NSError *error, NSDictionary *json) {
+//        if (error) {
+//            [self callbackIfExistsWithError:error authData:nil];
+//        } else {
+//            SLRequest *request = [self createCredentialRequestWithReverseAuthPayload:json];
+//            [self requestTwitterCredentials:request];
+//        }
+//    }];
 }
 
 // Step 1b Helper -- creates request to Twitter
@@ -136,7 +143,11 @@
             [self callbackIfExistsWithError:error authData:nil];
         });
     } else {
-        [self.ref authWithOAuthProvider:@"twitter" parameters:params withCompletionBlock:self.userCallback];
+//        [self.ref authWithOAuthProvider:@"twitter" parameters:params withCompletionBlock:self.userCallback];
+        FIRAuthCredential *credential = [FIRTwitterAuthProvider credentialWithToken:params[@"oauth_token"] secret:params[@"oauth_token_secret"]];
+        [[FIRAuth auth] signInWithCredential:credential completion:^(FIRUser *user, NSError *error) {
+                                      // ADD IN ERROR HANDLING AND WHAT TO DO IF SUCCESSFUL??
+                                  }];
     }
 }
 

@@ -6,48 +6,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "justonejess-social/FeedVC.swift"
-            timestampString = "485043585.787455"
+            filePath = "justonejess-social/GoogleAuth.swift"
+            timestampString = "485533941.438184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "signIn(_:presentViewController:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "justonejess-social/FeedVC.swift"
-            timestampString = "485043585.787455"
+            filePath = "justonejess-social/GoogleAuth.swift"
+            timestampString = "485534461.840386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "tableView(_:heightForRowAtIndexPath:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "authenticate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "justonejess-social/PostCell.swift"
-            timestampString = "484690753.089825"
+            filePath = "justonejess-social/GoogleAuth.swift"
+            timestampString = "485534466.655387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "configureCell(_:img:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "signIn(_:didSignInForUser:withError:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

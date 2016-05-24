@@ -11,8 +11,8 @@ import Material
 
 class JOJMainToolbar: Toolbar {
     let toolbarTitle = UILabel()
-    let moreBtn = FlatButton()
-    let moreBtnImage: UIImage = MaterialIcon.moreVertical!
+    let menuBtn = FlatButton()
+    let menuBtnImage: UIImage = MaterialIcon.menu!
     let placeBtn = FlatButton()
     let placeBtnImage: UIImage = MaterialIcon.place!
     
@@ -29,10 +29,10 @@ class JOJMainToolbar: Toolbar {
         
         // Configure title.
         configureLabel(toolbarTitle)
-        titleLabel = toolbarTitle
+//        titleLabel = configureLabel(toolbarTitle)
         
         // Configure more button.
-        configureButton(moreBtn, btnImage: moreBtnImage)
+        configureButton(menuBtn, btnImage: menuBtnImage)
         
         // Configure place button.
         configureButton(placeBtn, btnImage: placeBtnImage)
@@ -40,8 +40,11 @@ class JOJMainToolbar: Toolbar {
         // Add place button action.
         placeBtn.addTarget(nil, action: #selector(FeedVC.placeButtonTapped), forControlEvents: .TouchUpInside) // Best way to do this?
         
+        // Add menu button action.
+        menuBtn.addTarget(nil, action: #selector(FeedVC.menuButtonTapped), forControlEvents: .TouchUpInside)
+        
         // Add buttons to the left.
-        leftControls = [moreBtn]
+        leftControls = [menuBtn]
         
         // Add buttons to the right.
         rightControls = [placeBtn]
@@ -50,7 +53,7 @@ class JOJMainToolbar: Toolbar {
     
     func configureButton(btn: FlatButton, btnImage: UIImage) {
         btn.pulseColor = MaterialColor.white
-        btn.pulseScale = false
+//        btn.pulseScale = false
         btn.tintColor = MaterialColor.white
         btn.setImage(btnImage, forState: .Normal)
         btn.setImage(btnImage, forState: .Highlighted)

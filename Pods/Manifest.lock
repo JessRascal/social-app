@@ -1,14 +1,43 @@
 PODS:
-  - Alamofire (3.3.1)
-  - Firebase (2.5.1)
-  - Google/Core (2.0.4):
-    - GoogleInterchangeUtilities (~> 1.0)
-    - GoogleNetworkingUtilities (~> 1.0)
-    - GoogleSymbolUtilities (~> 1.0)
-    - GoogleUtilities (~> 1.1)
-  - Google/SignIn (2.0.4):
-    - Google/Core
-    - GoogleSignIn (~> 3.0)
+  - Alamofire (3.4.0)
+  - Fabric (1.6.7)
+  - Firebase/Analytics (3.2.0):
+    - FirebaseAnalytics (= 3.2.0)
+  - Firebase/Auth (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+    - FirebaseAuth (= 3.0.2)
+  - Firebase/Core (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+  - Firebase/Crash (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+    - FirebaseCrash (= 1.0.4)
+  - Firebase/Database (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+    - FirebaseDatabase (= 3.0.1)
+  - Firebase/Storage (3.2.0):
+    - Firebase/Analytics (= 3.2.0)
+    - FirebaseStorage (= 1.0.1)
+  - FirebaseAnalytics (3.2.0):
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.3)
+  - FirebaseAuth (3.0.2):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.3)
+  - FirebaseCrash (1.0.4):
+    - FirebaseAnalytics (~> 3.2)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleUtilities (~> 1.3)
+  - FirebaseDatabase (3.0.1):
+    - FirebaseAnalytics (~> 3.2)
+  - FirebaseInstanceID (1.0.6)
+  - FirebaseStorage (1.0.1):
+    - FirebaseAnalytics (~> 3.2)
+    - GoogleNetworkingUtilities (~> 1.2)
   - GoogleAppUtilities (1.1.1):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleAuthUtilities (2.0.1):
@@ -18,33 +47,50 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleNetworkingUtilities (1.2.1):
     - GoogleSymbolUtilities (~> 1.0)
-  - GoogleSignIn (3.0.0):
-    - GoogleAppUtilities (~> 1.0)
+  - GoogleSignIn (4.0.0):
+    - GoogleAppUtilities (~> 1.1)
     - GoogleAuthUtilities (~> 2.0)
-    - GoogleNetworkingUtilities (~> 1.0)
-    - GoogleUtilities (~> 1.0)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.3)
   - GoogleSymbolUtilities (1.1.1)
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
-  - Material (1.39.17)
+  - Material (1.41.1)
+  - TwitterCore (2.1.1):
+    - Fabric
+  - TwitterKit (2.1.1):
+    - TwitterCore (= 2.1.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.3)
-  - Firebase (>= 2.5.1)
-  - Google/SignIn
-  - Material (~> 1.0)
+  - Alamofire
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Crash
+  - Firebase/Database
+  - Firebase/Storage
+  - GoogleSignIn
+  - Material (= 1.41.1)
+  - TwitterKit
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
-  Google: d0932824c5b97c96be489aa6f4e8cd6c294d637d
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Firebase: 6d4012da1598732a2b43f16d8355eca90f94ed59
+  FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
+  FirebaseAuth: 94b851fc345ce98036dfedfdc2eddeaef8fa3b4c
+  FirebaseCrash: e3bff070dca75f71e10e4295b18642f77f6d87c9
+  FirebaseDatabase: 34301d11621a83546f39f670d256477ba6f7fcea
+  FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
+  FirebaseStorage: e9c32a8d246c07eeefd78180c22736aa1b81e81b
   GoogleAppUtilities: f1730f91f67767b453c289577040dd3f425ffdc7
   GoogleAuthUtilities: d7a19615cd7627688afcf181737f1011ee8b5a23
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
   GoogleNetworkingUtilities: 3e83269048cfb498dc7ec83ab36813360965c74f
-  GoogleSignIn: 3d571172b8603be39dcb1705d8217146bb76fe62
+  GoogleSignIn: 09036ed61f8e75f1424100d63f7719480b2428c3
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  Material: eccc5afdac89e10aa7a635ad34d6c3564387bfd3
+  Material: 441818e40ca8d30a4b83f9795e75a0d8c88ccf97
+  TwitterCore: abc46da2bc4b76e2c68a74cd8671a071a8e3abbf
+  TwitterKit: 38232c31f622db1f26a5952436eaa88d10763fd0
 
 COCOAPODS: 0.39.0
