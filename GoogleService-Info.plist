@@ -34,5 +34,7 @@
 	<string>1:232395589455:ios:7b6f3375bc2f3fcd</string>
 	<key>DATABASE_URL</key>
 	<string>https://rascal-showcase-2.firebaseio.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAC9rccnYIEXOt702RcILeOUhBEFqwYG7M</string>
 </dict>
 </plist>
