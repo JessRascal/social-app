@@ -4,7 +4,9 @@
 use_frameworks!
 
 target 'justonejess-social' do
-pod 'Firebase', '>= 2.5.1'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
 pod 'Alamofire', '~> 3.3'
 
 end

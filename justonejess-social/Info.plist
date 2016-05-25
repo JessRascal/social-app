@@ -47,19 +47,19 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb1797620557132675</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>1797620557132675</string>
-	<key>FacebookDisplayName</key>
-	<string>JustOneJess Social</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb569786266528147</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>569786266528147</string>
+    <key>FacebookDisplayName</key>
+    <string>Rascal Showcase 2</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

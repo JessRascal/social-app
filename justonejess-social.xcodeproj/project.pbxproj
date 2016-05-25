@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F0E96F632B70DE060FE7C7B /* Pods_justonejess_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4AD0C260D42B0EE670D2B7 /* Pods_justonejess_social.framework */; };
+		C8571E431CF63EF400AA017B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8571E421CF63EF400AA017B /* GoogleService-Info.plist */; };
 		C8C00AFD1CD0E93900B4FD41 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFC1CD0E93900B4FD41 /* DataService.swift */; };
 		C8C00AFF1CD0FBC800B4FD41 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */; };
 		C8C00B011CD0FC5E00B4FD41 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		2954BB12341E6A268C2011FC /* Pods-justonejess-social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justonejess-social.release.xcconfig"; path = "Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social.release.xcconfig"; sourceTree = "<group>"; };
 		7FC93A74F0296B08D4E91A7E /* Pods-justonejess-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justonejess-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-justonejess-social/Pods-justonejess-social.debug.xcconfig"; sourceTree = "<group>"; };
+		C8571E421CF63EF400AA017B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8C00AFC1CD0E93900B4FD41 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C8C00AFE1CD0FBC800B4FD41 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		C8C00B001CD0FC5E00B4FD41 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		C8C20F561CCE3BA9009369AD = {
 			isa = PBXGroup;
 			children = (
+				C8571E421CF63EF400AA017B /* GoogleService-Info.plist */,
 				C8C20F611CCE3BAA009369AD /* justonejess-social */,
 				C8C20F601CCE3BAA009369AD /* Products */,
 				CA1D2E52688F12ED1ECA58EF /* Pods */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C20F7C1CCE3C10009369AD /* NotoSans-Bold.ttf in Resources */,
+				C8571E431CF63EF400AA017B /* GoogleService-Info.plist in Resources */,
 				C8C20F6D1CCE3BAA009369AD /* LaunchScreen.storyboard in Resources */,
 				C8C20F7D1CCE3C10009369AD /* NotoSans-BoldItalic.ttf in Resources */,
 				C8C20F7E1CCE3C10009369AD /* NotoSans-Italic.ttf in Resources */,

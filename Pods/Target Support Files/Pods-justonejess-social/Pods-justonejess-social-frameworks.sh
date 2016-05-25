@@ -85,9 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-justonejess-social/Alamofire.framework"
-  install_framework "Pods-justonejess-social/Firebase.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-justonejess-social/Alamofire.framework"
-  install_framework "Pods-justonejess-social/Firebase.framework"
 fi

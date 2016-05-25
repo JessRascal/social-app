@@ -15,7 +15,7 @@ class Post {
     private var _likes: Int!
     private var _username: String!
     private var _postKey: String!
-    private var _postRef: Firebase!
+    private var _postRef: FIRDatabaseReference!
     
     var postDescription: String {
         return _postDescription
