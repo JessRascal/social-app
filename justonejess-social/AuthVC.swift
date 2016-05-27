@@ -73,6 +73,10 @@ class AuthVC: UIViewController/*, GIDSignInDelegate, GIDSignInUIDelegate*/ {
         
         TwitterAuth().authenticate(self)
         
+        
+        
+        
+        
         //        TWITTER_AUTH_HELPER.selectTwitterAccountWithCallback({ error, accounts in
         //
         //            if error != nil {
@@ -155,7 +159,8 @@ class AuthVC: UIViewController/*, GIDSignInDelegate, GIDSignInUIDelegate*/ {
     @IBAction func googleBtnTapped(sender: UIButton!) {
         // TODO - Check for existing Google access token to skip straight to FeedVC and saving uid with new user creation being skipped.
 //                GIDSignIn.sharedInstance().signIn()
-        GoogleAuth().authenticate()
+        let auth = GoogleAuth(authVC: self)
+        auth.authenticate()
     }
     
 //    // Log in to Google.

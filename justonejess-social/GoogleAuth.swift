@@ -12,15 +12,28 @@ import GoogleSignIn
 
 class GoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     
-//    let vc = AuthVC()
-    let vc = self.storyboard!.instantiateViewControllerWithIdentifier("AuthVC") as UIViewController
+    var vc: AuthVC!
+    //    let vc = self.storyboard!.instantiateViewControllerWithIdentifier("AuthVC") as UIViewController
     let provider = "Google"
     
-    func authenticate() {
+    init(authVC: AuthVC) {
+        super.init()
+        vc = authVC
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()!.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-//        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+    
+    func authenticate() {
+//        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()!.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
+//        //        GIDSignIn.sharedInstance().uiDelegate = self
+        
+//        GIDSignIn.sharedInstance().signInSilently()
+        
+        
         GIDSignIn.sharedInstance().signIn()
+//        signIn(GIDSignIn.sharedInstance(), didSignInForUser: GIDSignIn.sharedInstance().currentUser, withError: NSError!)
     }
     
     // Log in to Google.
@@ -37,17 +50,17 @@ class GoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
         }
     }
     
-//    // Stop the UIActivityIndicatorView animation that was started when the user
-//    // pressed the Sign In button
+    //    // Stop the UIActivityIndicatorView animation that was started when the user
+    //    // pressed the Sign In button
     func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
-//        myActivityIndicator.stopAnimating()
+        //        myActivityIndicator.stopAnimating()
     }
     
     // Present a view that prompts the user to sign in with Google
     func signIn(signIn: GIDSignIn!, presentViewController viewController: UIViewController!) {
+        //        vc.presentViewController(viewController, animated: true, completion: nil)
 //        vc.presentViewController(viewController, animated: true, completion: nil)
-        vc.presentViewController(viewController, animated: true, completion: nil)
-        
+         self.vc.presentViewController(viewController, animated: true, completion: nil)
     }
     
     // Dismiss the "Sign in with Google" view
