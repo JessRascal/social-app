@@ -8,13 +8,33 @@
 
 import Foundation
 import Firebase
+import Fabric
 import TwitterKit
 
 class TwitterAuth {
     
+    let provider = "Twitter"
+    
     func authenticate(vc: AuthVC) {
         
-        
+        Twitter.sharedInstance().logInWithCompletion { session, error in
+            if let unwrappedSession = session {
+                print("Successfully signed in to Twitter as \(unwrappedSession.userName)")
+                
+                let credential = FIRTwitterAuthProvider.credentialWithToken(unwrappedSession.authToken, secret: unwrappedSession.authTokenSecret)
+                FirebaseAuth().authenticate(credential, vc: vc, providerIn: self.provider)
+            } else {
+                vc.displayOkAlert("Sign In Error", message: "Unable to sign in to Twitter with the selected account, please try again.")
+                print("Twitter sign in error: \(error!.localizedDescription)")
+            }
+//            if (session != nil) {
+//                print("signed in as \(session!.userName)");
+//                let credential = FIRTwitterAuthProvider.credentialWithToken((session?.authToken)!, secret: (session?.authTokenSecret)!)
+//                FirebaseAuth().authenticate(credential, vc: vc, providerIn: self.provider)
+//            } else {
+//                print("error: \(error!.localizedDescription)");
+//            }
+        }
         
 //        
 //        TWITTER_AUTH_HELPER.selectTwitterAccountWithCallback({ error, accounts in

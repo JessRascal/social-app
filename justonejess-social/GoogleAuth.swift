@@ -60,7 +60,7 @@ class GoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     func signIn(signIn: GIDSignIn!, presentViewController viewController: UIViewController!) {
         //        vc.presentViewController(viewController, animated: true, completion: nil)
 //        vc.presentViewController(viewController, animated: true, completion: nil)
-         self.vc.presentViewController(viewController, animated: true, completion: nil)
+         vc.presentViewController(viewController, animated: true, completion: nil)
     }
     
     // Dismiss the "Sign in with Google" view

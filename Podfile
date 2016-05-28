@@ -12,7 +12,9 @@ pod 'Firebase/Crash'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'GoogleSignIn'
+pod 'Fabric'
 pod 'TwitterKit'
+pod 'TwitterCore'
 
 end
 

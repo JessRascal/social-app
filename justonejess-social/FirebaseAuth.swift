@@ -15,10 +15,11 @@ class FirebaseAuth {
         // Authenticate the passed in credential with Firebase.
         FIRAuth.auth()?.signInWithCredential(credential) { user, error in
             if error != nil {
-                print("Unable to authenticate \(providerIn) credentials with Firebase \(error?.localizedDescription)")
+                print("Unable to authenticate \(providerIn) credentials with Firebase. Error: \(error!.localizedDescription)")
+                print(error)
                 vc.displayOkAlert("\(providerIn) Login Failed", message: "Unable to log in via \(providerIn), please try again.")
             } else {
-                print("\(providerIn) account successfully logged in")
+                print("\(providerIn) account successfully authenticated with Firebase")
                 
                 if let user = user {
                     // Attempt to create a new user (will just perform required updates if user already exists).

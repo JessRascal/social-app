@@ -83,5 +83,53 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "justonejess-social/TwitterAuth.swift"
+            timestampString = "486141227.714656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "authenticate(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "justonejess_social.TwitterAuth.authenticate (justonejess_social.AuthVC) -&gt; ()"
+                  moduleName = "justonejess-social"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jess/Library/Mobile%20Documents/com~apple~CloudDocs/development/studying/devslopes/beginner-ios/lecture130/justonejess-social/justonejess-social/TwitterAuth.swift"
+                  timestampString = "486088370.973641"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "justonejess_social.TwitterAuth.(authenticate (justonejess_social.AuthVC) -&gt; ()).(closure #1)"
+                  moduleName = "justonejess-social"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jess/Library/Mobile%20Documents/com~apple~CloudDocs/development/studying/devslopes/beginner-ios/lecture130/justonejess-social/justonejess-social/TwitterAuth.swift"
+                  timestampString = "486088370.973898"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

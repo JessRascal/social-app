@@ -63,6 +63,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Fabric
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Crash
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleSignIn
   - Material (= 1.41.1)
+  - TwitterCore
   - TwitterKit
 
 SPEC CHECKSUMS:

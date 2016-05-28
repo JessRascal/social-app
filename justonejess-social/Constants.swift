@@ -12,7 +12,6 @@ let SHADOW_COLOUR: CGFloat = 157.0 / 255.0
 
 // Keys
 let KEY_UID = "uid"
-let TWITTER_API_KEY = "J9jqv3tWEOycMo4wjAXVPw1jC"
 
 // Segues
 let SEGUE_LOGGED_IN = "loggedIn"
@@ -21,10 +20,7 @@ let SEGUE_NEW_POST = "showNewPost"
 let SEGUE_LOGGED_OUT = "loggedOut"
 
 // Status codes
-let STATUS_ACCOUNT_NONEXIST = -8
-
-// Helpers
-let TWITTER_AUTH_HELPER = TwitterAuthHelper(firebaseRef: DataService.ds.REF_BASE, apiKey: TWITTER_API_KEY)
+let STATUS_ACCOUNT_NONEXIST = -8 // NEEDS CHANGING TO CORRECT CODE FOR FIREBASE SDK 3!
 
 // Storyboard IDs
 let SIDE_NAV_VC = "SideNavVC"

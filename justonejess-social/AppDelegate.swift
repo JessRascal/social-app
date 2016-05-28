@@ -11,6 +11,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Material
 import Firebase
+import Fabric
 import TwitterKit
 import GoogleSignIn
 
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use Firebase library to configure APIs
         FIRApp.configure()
+        
+        // Integrate Fabric (for Twitter auth).
+        Fabric.with([Twitter.self])
         
         // Set the initial view controller (depends on if the user has a uid saved in their userDefaults).
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
