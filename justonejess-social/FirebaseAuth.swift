@@ -22,11 +22,11 @@ class FirebaseAuth {
                 print("\(providerIn) account successfully authenticated with Firebase")
                 
                 if let user = user {
-                    // Attempt to create a new user (will just perform required updates if user already exists).
-                    vc.createNewUser(user.uid, provider: credential.provider)
-                    
                     // Store the authData uid to the UserDefaults so it is retained when the app is closed.
                     vc.saveUserId(user.uid)
+                    
+                    // Attempt to create a new user (will just perform required updates if user already exists).
+                    vc.createNewUser(user.uid, provider: credential.provider)
                     
                     // Take the logged in user to the feed screen.
                     vc.goToFeedVC()

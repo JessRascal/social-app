@@ -20,14 +20,22 @@ class TwitterAuth {
         // Log in to Twitter.
         Twitter.sharedInstance().logInWithCompletion { session, error in
             if let unwrappedSession = session {
-                print("Successfully logged in to Twitter as \(unwrappedSession.userName)")
-                
+                print("Successfully logged in to \(self.provider) as \(unwrappedSession.userName)")
                 // Authenticate the Facebook login with Firebase.
                 let credential = FIRTwitterAuthProvider.credentialWithToken(unwrappedSession.authToken, secret: unwrappedSession.authTokenSecret)
                 FirebaseAuth().authenticate(credential, vc: vc, providerIn: self.provider)
             } else {
-                vc.displayOkAlert("Sign In Error", message: "Unable to sign in to Twitter with the selected account, please try again.")
-                print("Twitter login error: \(error!.localizedDescription)")
+                if let error = error {
+                    switch error.code {
+                    case 1: TWITTER_CANCELLED_CODE
+                        print("The user denied the app access to their \(self.provider) account")
+                        break
+                    default:
+                        vc.displayOkAlert("\(self.provider) Sign In Error", message: "Unable to sign in to \(self.provider) with the selected account, please try again.")
+                        print("\(self.provider) login error: \(error.localizedDescription)")
+                        break
+                    }
+                }
             }
         }
     }

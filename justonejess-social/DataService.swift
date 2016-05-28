@@ -36,8 +36,11 @@ class DataService {
         return user
     }
     
-    func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
-        // Update the user's data in Firebase or create it if it doesn't already exist.
-        REF_USERS.child(uid).updateChildValues(user)
+    // Add user data to the DB.
+    func saveUserData(userData: Dictionary<String, String>) {
+        // Ensure the user has a uid before attempting to save their data.
+        if (NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil) {
+            REF_USER_CURRENT.updateChildValues(userData)
+        }
     }
 }

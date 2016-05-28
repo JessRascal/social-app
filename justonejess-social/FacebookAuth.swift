@@ -19,13 +19,14 @@ class FacebookAuth {
         let facebookLogin = FBSDKLoginManager()
         
         // Log in to Facebook.
-        facebookLogin.logInWithReadPermissions(["email"], fromViewController: vc, handler: { facebookResult, facebookError -> Void in
-            if facebookError != nil {
-                print("\(self.provider) login failed - \(facebookError)")
-                vc.displayOkAlert("\(self.provider) Login Failed", message: facebookError.localizedDescription)
-            } else if facebookResult.isCancelled {
-                print("\(self.provider) login was cancelled")
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: vc, handler: { result, error -> Void in
+            if error != nil {
+                print("\(self.provider) login failed - \(error)")
+                vc.displayOkAlert("\(self.provider) Login Failed", message: error.localizedDescription)
+            } else if result.isCancelled {
+                print("The user denied the app access to their \(self.provider) account")
             } else {
+                print("Successfully logged in to \(self.provider).")
                 // Authenticate the Facebook login with Firebase.
                 let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
                 FirebaseAuth().authenticate(credential, vc: vc, providerIn: self.provider)

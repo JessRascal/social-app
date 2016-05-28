@@ -17,26 +17,21 @@ class AuthVC: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    let gAuth = GoogleAuth()
+    let googleAuth = GoogleAuth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup delegates.
+        googleAuth.vc = self
+        
+        // Setup Google sign in delegates.
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()!.options.clientID
-        GIDSignIn.sharedInstance().delegate = gAuth
+        GIDSignIn.sharedInstance().delegate = googleAuth
         GIDSignIn.sharedInstance().uiDelegate = self
     }
     
-    
-    
     // Facebook login.
     @IBAction func fbBtnTapped(sender: UIButton!) {
-        
-        
-        // MOVE THIS GUARD STEMENT IN TO THE FacebookAuth CLASS AS WELL?????????????
-        
-        
         // Check if the user already has a valid current access token.
         // This avoids the user having to reauthorise the app with Facebook every time they log in.
         
@@ -67,38 +62,16 @@ class AuthVC: UIViewController, GIDSignInUIDelegate {
         goToFeedVC()
     }
     // Facebook login end.
-
-    
     
     // Twitter Login
     @IBAction func twitterBtnTapped(sender: UIButton!) {
         TwitterAuth().authenticate(self)
     }
-
-    
     
     // Google login.
     @IBAction func googleBtnTapped(sender: UIButton!) {
-        // TODO - Check for existing Google access token to skip straight to FeedVC and saving uid with new user creation being skipped.
-//                GIDSignIn.sharedInstance().signIn()
-
-//        GoogleAuth().authenticate(self)
         GIDSignIn.sharedInstance().signIn()
     }
-    
-//    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
-//        if error != nil {
-//            print("Google login failed - \(error)")
-//            self.displayOkAlert("Google Login Failed", message: error.localizedDescription)
-//        } else {
-//            let authentication = user.authentication
-//            let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken, accessToken: authentication.accessToken)
-//            
-//            // Authenticate the Facebook login with Firebase.
-//            FirebaseAuth().authenticate(credential, vc: self, providerIn: "Google")
-//        }
-//    }
-    // Google login end.
     
     
     
@@ -156,7 +129,7 @@ class AuthVC: UIViewController, GIDSignInUIDelegate {
     // Login helper functions.
     func createNewUser(uid: String, provider: String) {
         let userData = ["provider": provider]
-        DataService.ds.createFirebaseUser(uid, user: userData)
+        DataService.ds.saveUserData(userData)
     }
     
     func saveUserId(uid: String) {
@@ -164,10 +137,8 @@ class AuthVC: UIViewController, GIDSignInUIDelegate {
     }
     
     func goToFeedVC() {
-        //        performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
         
         let feedVC = self.storyboard!.instantiateViewControllerWithIdentifier("FeedVC") as UIViewController
-        //        sideNavigationController?.transitionFromRootViewController(feedVC)
         sideNavigationController?.transitionFromRootViewController(feedVC,
                                                                    duration: 1,
                                                                    options: .TransitionNone,
@@ -179,10 +150,6 @@ class AuthVC: UIViewController, GIDSignInUIDelegate {
     
     // Log out the user.
     func logOut() {
-        // Sign out of Google.
-        //        GIDSignIn.sharedInstance().signOut()
-        // Unauthenticate the user.
-        //        DataService.ds.REF_BASE.unauth() // REMOVES ACCESS TOKEN SO APPS HAVE TO AUTHROISE EVERY TIME
         // Clear the saved UID in the user defaults.
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
         print("The user has been logged out")
