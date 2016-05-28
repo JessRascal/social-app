@@ -10,31 +10,10 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class GoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
+class GoogleAuth: NSObject, GIDSignInDelegate/*, GIDSignInUIDelegate*/ {
     
-    var vc: AuthVC!
-    //    let vc = self.storyboard!.instantiateViewControllerWithIdentifier("AuthVC") as UIViewController
+    let vc = AuthVC()
     let provider = "Google"
-    
-    init(authVC: AuthVC) {
-        super.init()
-        vc = authVC
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()!.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-    }
-    
-    func authenticate() {
-//        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()!.options.clientID
-//        GIDSignIn.sharedInstance().delegate = self
-//        //        GIDSignIn.sharedInstance().uiDelegate = self
-        
-//        GIDSignIn.sharedInstance().signInSilently()
-        
-        
-        GIDSignIn.sharedInstance().signIn()
-//        signIn(GIDSignIn.sharedInstance(), didSignInForUser: GIDSignIn.sharedInstance().currentUser, withError: NSError!)
-    }
     
     // Log in to Google.
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
@@ -46,25 +25,7 @@ class GoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
             let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken, accessToken: authentication.accessToken)
             
             // Authenticate the Facebook login with Firebase.
-            FirebaseAuth().authenticate(credential, vc: vc, providerIn: provider)
+            FirebaseAuth().authenticate(credential, vc: vc, providerIn: credential.provider)
         }
-    }
-    
-    //    // Stop the UIActivityIndicatorView animation that was started when the user
-    //    // pressed the Sign In button
-    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
-        //        myActivityIndicator.stopAnimating()
-    }
-    
-    // Present a view that prompts the user to sign in with Google
-    func signIn(signIn: GIDSignIn!, presentViewController viewController: UIViewController!) {
-        //        vc.presentViewController(viewController, animated: true, completion: nil)
-//        vc.presentViewController(viewController, animated: true, completion: nil)
-         vc.presentViewController(viewController, animated: true, completion: nil)
-    }
-    
-    // Dismiss the "Sign in with Google" view
-    func signIn(signIn: GIDSignIn!, dismissViewController viewController: UIViewController!) {
-        vc.dismissViewControllerAnimated(true, completion: nil)
     }
 }
